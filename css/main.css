@@ -1,0 +1,561 @@
+/* ==========================================================================
+   MAIN LAYOUT & SECTION STYLES
+   P. LAKSHMI NIVAS // DIGITAL LABORATORY & AI/ML PORTFOLIO
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   00. CSS RESET & GLOBAL BASE
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--color-deep-ink);
+  color: var(--color-mineral);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  background-color: var(--color-deep-ink);
+  color: var(--color-mineral);
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Engineering Blueprint Background Grid */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(234, 244, 240, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(234, 244, 240, 0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: var(--z-grid);
+}
+
+::selection {
+  background-color: var(--color-electric-mint);
+  color: var(--color-deep-ink);
+}
+
+/* Layout Containers */
+.site-container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+  position: relative;
+  z-index: var(--z-content);
+}
+
+.site-container-wide {
+  width: 100%;
+  max-width: var(--container-wide);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+  position: relative;
+  z-index: var(--z-content);
+}
+
+section {
+  position: relative;
+  padding-top: clamp(4rem, 10vw, 8rem);
+  padding-bottom: clamp(4rem, 10vw, 8rem);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* --------------------------------------------------------------------------
+   01. HERO SECTION (Cinematic Sequence)
+   -------------------------------------------------------------------------- */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: clamp(7rem, 14vw, 10rem);
+  padding-bottom: clamp(4rem, 8vw, 6rem);
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-scan-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--color-electric-mint) 50%, 
+    transparent 100%);
+  box-shadow: 0 0 15px var(--color-electric-mint);
+  animation: scanLine 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.hero-meta-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+  font-family: var(--font-utility);
+  font-size: var(--text-xs);
+  color: var(--color-mineral-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hero-sys-status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-electric-mint);
+  font-weight: 600;
+}
+
+.hero-main-title {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: var(--color-mineral);
+  margin-bottom: var(--space-6);
+}
+
+.hero-main-title .name-line {
+  display: block;
+  overflow: hidden;
+}
+
+.hero-positioning {
+  font-family: var(--font-utility);
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 500;
+  color: var(--color-electric-mint);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.hero-positioning::before {
+  content: '>';
+  color: var(--color-mineral-dim);
+}
+
+.hero-supporting-copy {
+  font-family: var(--font-body);
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  color: var(--color-mineral-dim);
+  max-width: 680px;
+  line-height: 1.6;
+  margin-bottom: var(--space-10);
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-bottom: var(--space-12);
+}
+
+/* --------------------------------------------------------------------------
+   02. ABOUT SECTION (Editorial Split Layout)
+   -------------------------------------------------------------------------- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(2rem, 6vw, 6rem);
+  align-items: start;
+}
+
+.about-editorial-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--color-mineral);
+  margin-bottom: var(--space-8);
+}
+
+.about-editorial-lead {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  color: var(--color-mineral);
+  line-height: 1.7;
+  margin-bottom: var(--space-6);
+}
+
+.about-editorial-text {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-mineral-dim);
+  line-height: 1.8;
+  margin-bottom: var(--space-8);
+}
+
+.about-goal-callout {
+  background: var(--color-deep-ink-card);
+  border-left: 3px solid var(--color-electric-mint);
+  padding: var(--space-6) var(--space-8);
+  border-radius: 0 12px 12px 0;
+  margin-bottom: var(--space-8);
+}
+
+.about-goal-callout h4 {
+  font-family: var(--font-utility);
+  font-size: var(--text-2xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-electric-mint);
+  margin-bottom: var(--space-2);
+}
+
+.about-goal-callout p {
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  color: var(--color-mineral);
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Learning Progression Timeline */
+.learning-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  position: relative;
+  padding-left: var(--space-8);
+  border-left: 1px solid var(--border-strong);
+}
+
+.timeline-step {
+  position: relative;
+}
+
+.timeline-step::before {
+  content: '';
+  position: absolute;
+  left: calc(-1 * var(--space-8) - 5px);
+  top: 6px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-deep-ink);
+  border: 2px solid var(--color-mineral-dim);
+  transition: all var(--transition-fast);
+}
+
+.timeline-step:hover::before,
+.timeline-step.is-active::before {
+  border-color: var(--color-electric-mint);
+  background: var(--color-electric-mint);
+  box-shadow: 0 0 12px var(--color-electric-mint);
+}
+
+.timeline-step-label {
+  font-family: var(--font-utility);
+  font-size: var(--text-2xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-electric-mint);
+  margin-bottom: var(--space-1);
+}
+
+.timeline-step-title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-mineral);
+  margin-bottom: var(--space-2);
+}
+
+.timeline-step-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* --------------------------------------------------------------------------
+   03. SKILLS SECTION HEADER
+   -------------------------------------------------------------------------- */
+.section-header-compact {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  margin-bottom: var(--space-12);
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: var(--space-6);
+}
+
+.section-title-large {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--color-mineral);
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-mineral-dim);
+  max-width: 440px;
+}
+
+/* --------------------------------------------------------------------------
+   07. CONTACT SECTION (Editorial & Magnetic)
+   -------------------------------------------------------------------------- */
+.contact-section {
+  padding-top: clamp(6rem, 12vw, 10rem);
+  padding-bottom: clamp(6rem, 12vw, 10rem);
+  background: linear-gradient(180deg, var(--color-deep-ink) 0%, #030B0E 100%);
+}
+
+.contact-headline {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7.5vw, 6.5rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: var(--color-mineral);
+  margin-bottom: var(--space-8);
+}
+
+.contact-supporting-text {
+  font-family: var(--font-body);
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  color: var(--color-mineral-dim);
+  max-width: 640px;
+  line-height: 1.6;
+  margin-bottom: var(--space-12);
+}
+
+.contact-channels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+  margin-bottom: var(--space-12);
+}
+
+.contact-channel-card {
+  background: var(--color-deep-ink-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-channel-card:hover {
+  border-color: var(--color-electric-mint);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(141, 242, 207, 0.15);
+}
+
+.channel-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+}
+
+.channel-label {
+  font-family: var(--font-utility);
+  font-size: var(--text-2xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-electric-mint);
+}
+
+.channel-icon {
+  font-family: var(--font-utility);
+  font-size: var(--text-md);
+  color: var(--color-mineral);
+  transition: transform var(--transition-fast);
+}
+
+.contact-channel-card:hover .channel-icon {
+  transform: translate(4px, -4px);
+  color: var(--color-electric-mint);
+}
+
+.channel-value {
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  font-weight: 700;
+  color: var(--color-mineral);
+  word-break: break-all;
+}
+
+.channel-hint {
+  font-family: var(--font-utility);
+  font-size: var(--text-2xs);
+  color: var(--color-mineral-dim);
+  margin-top: var(--space-2);
+}
+
+/* --------------------------------------------------------------------------
+   08. FOOTER
+   -------------------------------------------------------------------------- */
+.site-footer {
+  padding: var(--space-12) 0;
+  background: #020709;
+  border-top: 1px solid var(--border-subtle);
+  font-family: var(--font-utility);
+  font-size: var(--text-xs);
+  color: var(--color-mineral-dim);
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+}
+
+.footer-meta-left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.footer-name {
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  font-weight: 700;
+  color: var(--color-mineral);
+}
+
+.footer-meta-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.footer-status-pill {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 4px 10px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 9999px;
+  background: rgba(234, 244, 240, 0.02);
+}
+
+/* --------------------------------------------------------------------------
+   09. RESPONSIVE BREAKPOINTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .build-core-flow {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+  }
+  
+  .core-node::after {
+    display: none;
+  }
+  
+  .core-inspector {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+  
+  .modal-spec-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  
+  .nav-links,
+  .nav-status-badge {
+    display: none;
+  }
+  
+  .nav-toggle-btn {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .build-core-flow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .projects-archive-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .horizon-flow-container::before {
+    display: none;
+  }
+  
+  .horizon-flow-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .build-core-flow {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}

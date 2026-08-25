@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P. Lakshmi Nivas — AI/ML Engineer in Training</title>
+  <meta name="description" content="Personal digital laboratory of P. Lakshmi Nivas. Computer Science & Engineering student specializing in AI & Machine Learning at Lovely Professional University.">
+  <meta name="keywords" content="P. Lakshmi Nivas, AI/ML Engineer, Computer Science, Machine Learning, Deep Learning, React Native, Python, Software Engineering">
+  <meta name="author" content="P. Lakshmi Nivas">
+
+  <!-- Open Graph & Social Preview -->
+  <meta property="og:title" content="P. Lakshmi Nivas — AI/ML Engineer in Training">
+  <meta property="og:description" content="Personal digital laboratory showcasing engineered software systems, AI/ML foundations, and selected builds.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/Nivas67/portfolioxNivi">
+
+  <!-- Google Fonts: Space Grotesk (Display), Manrope (Body), DM Mono (Utility) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- Custom Cursor Elements (Desktop Only) -->
+  <div id="custom-cursor" class="custom-cursor" aria-hidden="true"></div>
+  <div id="custom-cursor-follower" class="custom-cursor-follower" aria-hidden="true"></div>
+
+  <!-- Floating Navigation -->
+  <header id="header-nav" class="header-nav">
+    <a href="#hero" class="nav-brand" aria-label="Home">
+      NIVAS<span class="degree-symbol">°</span>
+    </a>
+
+    <nav aria-label="Primary Navigation">
+      <ul class="nav-links">
+        <li class="nav-link-item"><a href="#about">About</a></li>
+        <li class="nav-link-item"><a href="#skills">Skills</a></li>
+        <li class="nav-link-item"><a href="#projects">Projects</a></li>
+        <li class="nav-link-item"><a href="#build-log">Build Log</a></li>
+        <li class="nav-link-item"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-status-badge">
+      <span class="status-dot"></span>
+      <span>AVAILABLE TO BUILD</span>
+    </div>
+
+    <!-- Mobile Menu Toggle Button -->
+    <button id="mobile-nav-toggle" class="nav-toggle-btn" aria-label="Open Navigation Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </header>
+
+  <!-- Full-Screen Mobile Drawer -->
+  <div id="mobile-menu" class="mobile-menu-overlay" aria-hidden="true">
+    <button id="mobile-menu-close" class="mobile-menu-close" aria-label="Close Navigation Menu">✕</button>
+    <ul class="mobile-nav-links">
+      <li><a href="#about">01 // ABOUT</a></li>
+      <li><a href="#skills">02 // SKILLS</a></li>
+      <li><a href="#projects">03 // PROJECTS</a></li>
+      <li><a href="#build-log">04 // BUILD LOG</a></li>
+      <li><a href="#contact">05 // CONTACT</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- ====================================================================
+         01. HERO SECTION
+         ==================================================================== -->
+    <section id="hero" class="hero-section">
+      <div class="hero-scan-line"></div>
+      
+      <div class="site-container">
+        <!-- Top Technical Metadata -->
+        <div class="hero-meta-bar anim-fade-up">
+          <div class="hero-sys-status">
+            <span class="status-dot"></span>
+            <span>SYSTEM ONLINE</span>
+          </div>
+          <div>CSE · AI/ML SPECIALIZATION</div>
+          <div>LOVELY PROFESSIONAL UNIVERSITY</div>
+          <div>2025 — 2029</div>
+          <div id="hero-live-time">00:00:00 UTC</div>
+        </div>
+
+        <!-- Main Heading Reveal -->
+        <h1 class="hero-main-title">
+          <span class="name-line anim-mask-reveal"><span>P. LAKSHMI</span></span>
+          <span class="name-line anim-mask-reveal"><span>NIVAS.</span></span>
+        </h1>
+
+        <!-- Positioning -->
+        <div class="hero-positioning anim-fade-up">
+          <span>AI/ML ENGINEER IN TRAINING</span>
+        </div>
+
+        <!-- Supporting Copy -->
+        <p class="hero-supporting-copy anim-fade-up">
+          Computer Science student building toward AI/ML engineering through software, systems, and real-world products.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="hero-cta-group anim-fade-up">
+          <a href="#projects" class="btn-primary">Explore Builds ↗</a>
+          <a href="#contact" class="btn-secondary">Initialize Contact</a>
+        </div>
+
+        <!-- Signature Experience: NIVAS // BUILD CORE -->
+        <div class="build-core-wrapper anim-fade-up">
+          <div class="build-core-header">
+            <div>
+              <div class="section-label">Signature System</div>
+              <h2 class="build-core-title">NIVAS // BUILD CORE <span>[ENGINEERED PIPELINE]</span></h2>
+            </div>
+            <div class="build-core-hint">
+              <span class="status-dot"></span>
+              HOVER / SELECT NODE TO INSPECT PIPELINE
+            </div>
+          </div>
+
+          <!-- Flow Grid -->
+          <div id="build-core-flow" class="build-core-flow">
+            <!-- Rendered dynamically by buildCore.js -->
+          </div>
+
+          <!-- Interactive Inspector Panel -->
+          <div class="core-inspector">
+            <div class="inspector-meta">
+              <h4>Active Role // <span id="core-inspector-title">PYTHON</span></h4>
+              <p id="core-inspector-role">Programming & Execution Foundation</p>
+            </div>
+            <div class="inspector-desc">
+              <p id="core-inspector-desc">The primary language for model development, rapid prototyping, and algorithmic implementation.</p>
+            </div>
+            <div>
+              <div class="inspector-tags" id="core-inspector-tags">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         02. ABOUT SECTION (Editorial Split Layout)
+         ==================================================================== -->
+    <section id="about">
+      <div class="site-container">
+        <div class="about-grid">
+          <!-- Left Column: Editorial Story -->
+          <div>
+            <div class="section-label">01 / ABOUT</div>
+            <h2 class="about-editorial-heading">LEARNING<br>BY BUILDING.</h2>
+            
+            <p class="about-editorial-lead">
+              I'm pursuing B.Tech in Computer Science Engineering with a specialization in Artificial Intelligence & Machine Learning at Lovely Professional University.
+            </p>
+
+            <p class="about-editorial-text">
+              My current foundation spans Python, C, Data Structures & Algorithms, DBMS, software engineering, embedded systems, and electrical fundamentals. Rather than treating theory in isolation, I translate computational concepts directly into functional software architectures and product prototypes.
+            </p>
+
+            <div class="about-goal-callout">
+              <h4>Long-Term Engineering Objective</h4>
+              <p>"To become an AI/ML engineer capable of moving from an idea to a working product and building intelligent applications that solve real problems."</p>
+            </div>
+          </div>
+
+          <!-- Right Column: Learning Progression Timeline -->
+          <div>
+            <div class="learning-timeline">
+              <div class="timeline-step is-active">
+                <div class="timeline-step-label">// PHASE 01 · ACTIVE</div>
+                <h3 class="timeline-step-title">FOUNDATIONS</h3>
+                <div class="timeline-step-skills">
+                  <span class="tech-tag">Python 3</span>
+                  <span class="tech-tag">C Systems</span>
+                  <span class="tech-tag">DSA Optimization</span>
+                </div>
+              </div>
+
+              <div class="timeline-step is-active">
+                <div class="timeline-step-label">// PHASE 02 · ACTIVE</div>
+                <h3 class="timeline-step-title">SYSTEMS & ARCHITECTURE</h3>
+                <div class="timeline-step-skills">
+                  <span class="tech-tag">DBMS / SQL</span>
+                  <span class="tech-tag">Software Engineering (IEEE 830)</span>
+                  <span class="tech-tag">Embedded Systems</span>
+                  <span class="tech-tag">Electrical Fundamentals</span>
+                </div>
+              </div>
+
+              <div class="timeline-step is-active">
+                <div class="timeline-step-label">// PHASE 03 · DEPLOYED</div>
+                <h3 class="timeline-step-title">BUILDING & PRODUCTS</h3>
+                <div class="timeline-step-skills">
+                  <span class="tech-tag">Web Platforms</span>
+                  <span class="tech-tag">React Native Mobile</span>
+                  <span class="tech-tag">Firebase Cloud</span>
+                </div>
+              </div>
+
+              <div class="timeline-step">
+                <div class="timeline-step-label">// PHASE 04 · TARGET</div>
+                <h3 class="timeline-step-title">INTELLIGENCE & AI/ML</h3>
+                <div class="timeline-step-skills">
+                  <span class="tech-tag">Machine Learning</span>
+                  <span class="tech-tag">Deep Neural Networks</span>
+                  <span class="tech-tag">Applied AI Systems</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         03. SKILLS SECTION (Capability Matrix)
+         ==================================================================== -->
+    <section id="skills">
+      <div class="site-container">
+        <div class="section-header-compact">
+          <div>
+            <div class="section-label">02 / CAPABILITY MATRIX</div>
+            <h2 class="section-title-large">TECHNICAL<br>CONSTELLATION.</h2>
+          </div>
+          <p class="section-subtitle">
+            An engineered map of core competencies spanning foundational algorithms, systems engineering, mobile frameworks, and hardware fundamentals.
+          </p>
+        </div>
+
+        <!-- Capability Matrix Grid -->
+        <div id="skills-matrix-grid" class="skills-matrix-grid">
+          <!-- Rendered dynamically by skills.js -->
+        </div>
+
+        <!-- Detail Inspector Bar -->
+        <div class="skills-detail-inspector">
+          <div>
+            <div class="channel-label">Selected Competency</div>
+            <div class="channel-value" id="skill-detail-name">Python</div>
+          </div>
+          <div>
+            <div class="channel-label">Foundation</div>
+            <div class="channel-value" id="skill-detail-foundation">Programming</div>
+          </div>
+          <div>
+            <div class="channel-label">Focus Areas</div>
+            <div class="channel-value" id="skill-detail-focus">AI / ML, Algorithms, Automation</div>
+          </div>
+          <div>
+            <div class="channel-label">Status</div>
+            <div class="channel-value" id="skill-detail-status" style="color: var(--color-electric-mint);">ACTIVE</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         04. PROJECTS SECTION (Selected Builds)
+         ==================================================================== -->
+    <section id="projects">
+      <div class="site-container-wide">
+        <div class="section-header-compact">
+          <div>
+            <div class="section-label">03 / SELECTED BUILDS</div>
+            <h2 class="section-title-large">THINGS I'VE<br>MADE REAL.</h2>
+          </div>
+          <p class="section-subtitle">
+            Engineered systems, mobile products, software specifications, and interactive visualizations built with precision.
+          </p>
+        </div>
+
+        <!-- Projects Archive Grid -->
+        <div id="projects-archive-grid" class="projects-archive-grid">
+          <!-- Rendered dynamically by projects.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         05. BUILD LOG (Developer Terminal)
+         ==================================================================== -->
+    <section id="build-log">
+      <div class="site-container">
+        <div class="section-header-compact">
+          <div>
+            <div class="section-label">04 / CONTINUOUS TELEMETRY</div>
+            <h2 class="section-title-large">BUILD LOG.</h2>
+          </div>
+          <p class="section-subtitle">
+            Real-time execution feed documenting system milestones, deployed builds, and next engineering horizons.
+          </p>
+        </div>
+
+        <!-- Terminal Interface -->
+        <div class="terminal-wrapper">
+          <div class="terminal-topbar">
+            <div class="terminal-dots">
+              <span class="terminal-dot"></span>
+              <span class="terminal-dot"></span>
+              <span class="terminal-dot"></span>
+            </div>
+            <div class="terminal-title">NIVAS_LAB_KERNEL // TELEMETRY_STREAM</div>
+            <div>[LIVE]</div>
+          </div>
+
+          <div id="terminal-log-body" class="terminal-body">
+            <!-- Streamed progressively by buildLog.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         06. NEXT HORIZON
+         ==================================================================== -->
+    <section id="horizon">
+      <div class="site-container">
+        <div class="section-header-compact">
+          <div>
+            <div class="section-label">05 / ENGINEERING TRAJECTORY</div>
+            <h2 class="section-title-large">NEXT<br>HORIZON.</h2>
+          </div>
+          <p class="section-subtitle">
+            The strategic roadmap connecting computer science foundations to cutting-edge intelligent applications.
+          </p>
+        </div>
+
+        <!-- Linear Horizon Track -->
+        <div id="horizon-flow-container" class="horizon-flow-container">
+          <!-- Rendered dynamically by horizon.js -->
+        </div>
+
+        <div class="horizon-statement-box">
+          <p class="horizon-statement-text">
+            "Build systems that move from intelligent ideas to useful products."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         07. CONTACT & COLLABORATION
+         ==================================================================== -->
+    <section id="contact" class="contact-section">
+      <div class="site-container">
+        <div class="section-label">06 / COLLABORATE & CONNECT</div>
+        <h2 class="contact-headline">LET'S BUILD<br>WHAT'S NEXT.</h2>
+        
+        <p class="contact-supporting-text">
+          Have an idea, an opportunity, a collaboration, or simply want to talk about AI/ML, software systems, and building products?
+        </p>
+
+        <div class="contact-channels-grid">
+          <!-- GitHub (Real Link) -->
+          <a href="https://github.com/Nivas67" target="_blank" rel="noopener noreferrer" class="contact-channel-card" data-cursor="open">
+            <div class="channel-card-top">
+              <span class="channel-label">01 // CODEBASE</span>
+              <span class="channel-icon">↗</span>
+            </div>
+            <div>
+              <div class="channel-value">github.com/Nivas67</div>
+              <div class="channel-hint">Explore source code & repositories</div>
+            </div>
+          </a>
+
+          <!-- Email (Placeholder with One-Click Copy) -->
+          <a href="mailto:lakshmi.nivas.ai@example.com" id="copy-email-btn" data-email="lakshmi.nivas.ai@example.com" class="contact-channel-card" data-cursor="open">
+            <div class="channel-card-top">
+              <span class="channel-label">02 // DIRECT INBOX</span>
+              <span class="channel-icon">↗</span>
+            </div>
+            <div>
+              <div class="channel-value">lakshmi.nivas.ai@example.com</div>
+              <div id="copy-email-hint" class="channel-hint">Click to copy email address</div>
+            </div>
+          </a>
+
+          <!-- LinkedIn (Placeholder) -->
+          <a href="https://linkedin.com/in/p-lakshmi-nivas-placeholder" target="_blank" rel="noopener noreferrer" class="contact-channel-card" data-cursor="open">
+            <div class="channel-card-top">
+              <span class="channel-label">03 // PROFESSIONAL NETWORK</span>
+              <span class="channel-icon">↗</span>
+            </div>
+            <div>
+              <div class="channel-value">linkedin.com/in/p-lakshmi-nivas</div>
+              <div class="channel-hint">Connect for career & research</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+       08. FOOTER
+       ==================================================================== -->
+  <footer class="site-footer">
+    <div class="site-container footer-container">
+      <div class="footer-meta-left">
+        <span class="footer-name">P. LAKSHMI NIVAS</span>
+        <span>B.TECH CSE · AI/ML SPECIALIZATION · LOVELY PROFESSIONAL UNIVERSITY</span>
+      </div>
+
+      <div class="footer-meta-right">
+        <span class="footer-status-pill">
+          <span class="status-dot"></span>
+          SYSTEM STATUS: ONLINE
+        </span>
+        <span class="footer-status-pill">
+          BUILD: STABLE [2026.08]
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================================================================
+       FULLSCREEN PROJECT BLUEPRINT MODAL
+       ==================================================================== -->
+  <div id="project-modal-overlay" class="project-modal-overlay" aria-hidden="true">
+    <div class="project-modal-container">
+      <button id="project-modal-close" class="modal-close-btn" aria-label="Close Case Study">✕</button>
+      
+      <div class="modal-blueprint-header">
+        <div id="modal-project-num" class="modal-project-num">// 01 · WEB / E-COMMERCE</div>
+        <h2 id="modal-project-title" class="modal-project-title">FreshBasket</h2>
+        <div id="modal-project-tech" class="project-tech-pills"></div>
+      </div>
+
+      <div class="modal-spec-grid">
+        <div>
+          <div class="modal-spec-section">
+            <h4>// System Overview</h4>
+            <p id="modal-project-overview"></p>
+          </div>
+
+          <div class="modal-spec-section">
+            <h4>// Key Objectives</h4>
+            <p id="modal-project-objective"></p>
+          </div>
+
+          <div class="modal-spec-section">
+            <h4>// Core Features & Architecture</h4>
+            <ul id="modal-project-features"></ul>
+          </div>
+        </div>
+
+        <div>
+          <div class="modal-spec-section">
+            <h4>// Technical Learnings</h4>
+            <p id="modal-project-learned"></p>
+          </div>
+
+          <div class="modal-spec-section">
+            <h4>// Current Deployment Status</h4>
+            <p id="modal-project-status" style="color: var(--color-electric-mint); font-weight: 700;"></p>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid var(--border-subtle); padding-top: var(--space-6); display: flex; justify-content: flex-end;">
+        <button onclick="document.getElementById('project-modal-close').click()" class="btn-secondary">
+          ← Back to Builds
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

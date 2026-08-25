@@ -1,83 +1,105 @@
-# FitTrack — Complete Mobile Fitness & Gym Planning App
+# P. Lakshmi Nivas — AI/ML Engineer in Training
+> Personal digital laboratory & engineering portfolio showcasing foundational computer science, systems architecture, and AI/ML builds.
 
-FitTrack is a cross-platform mobile fitness lifestyle application built with **React Native**, **Expo**, and **TypeScript**. It is designed for gym-goers who want a single, powerful app to manage their workout splits, log live sets with rest timers & auto-progression, follow tailored diet plans with barcode food scanning, sync smartwatch telemetry (Apple Health, Google Fit, Fitbit), and track continuous discipline with streaks and 1RM strength analytics.
-
----
-
-## 🌟 Key Features
-
-### 1. 📋 Onboarding & Precision Target Calculation
-- 4-slide interactive onboarding carousel introducing workouts, diet, smartwatches, and discipline.
-- **Mifflin-St Jeor Formula**: Calculates BMR, TDEE, suggested calories, and custom macro ratios (Protein / Carbs / Fat) and water intake based on your goal (*Cut / Lean Bulk / Maintain / Recomp / Endurance*).
-
-### 2. 🏋️ Workout Planning & Live Session Mode
-- **Pre-Built Splits**: 6-Day Push/Pull/Legs, 4-Day Upper/Lower, and 3-Day Full Body routines.
-- **100+ Exercise Library**: Database with muscle group filtering (Chest, Back, Shoulders, Quads, Hamstrings, Glutes, Arms, Core, Cardio), equipment tags, step-by-step instructions, and form tips.
-- **Live Workout Mode**:
-  - High-contrast, one-handed set logging table (Weight kg/lbs, Reps, RPE 6-10).
-  - Audio/Visual Rest Timer countdown bar with +/- 15s quick adjust.
-  - **Auto-Progression suggestions**: Recommends weight increases when rep targets are crushed.
-  - Workout Summary modal calculating total volume (kg lifted), duration, active burn, and PR highlights.
-- **Custom Routine Builder**: Build, customize, and save custom splits.
-
-### 3. 🥗 Diet, Macros & Open Food Facts API
-- Daily calorie & macro target dashboard with interactive SVG circular gauge.
-- 4 Meal tracking slots (*Breakfast, Lunch, Dinner, Snacks*).
-- **Open Food Facts API Search**: Live search across millions of global products with automatic macro parsing.
-- **Barcode Scanner**: Barcode lookup tool for instant nutrition entry.
-- **Custom Food & Recipe Creator**: Save your own custom meals.
-- **Hydration Tracker**: Quick-add water logger (+250ml / +500ml).
-- **Diet Templates**: High-protein shred, lean bulk, recomp, and vegan options.
-
-### 4. ⌚ Smartwatch & Wearable Sync
-- Unified sync adapter for **Apple HealthKit**, **Google Fit / Health Connect**, and **Fitbit Web API**.
-- Merges watch data (*Steps, Active Burned Calories, Resting Heart Rate, Sleep Duration*).
-- **Net Energy Balance**: Calculates Daily Diet In minus Total Burn Out (Active Burn + BMR).
-- **Heart Rate Training Zones**: Breakdown of 5 training zones (Recovery to Peak).
-- Built-in live telemetry simulator for testing on any device/web browser.
-
-### 5. 📈 Progress Analytics & Gamification
-- **Weight Trend Graph**: SVG trendline tracking body weight changes and moving averages.
-- **1RM Strength Progression**: Epley formula $1RM = w \times (1 + r / 30)$ tracking Bench Press, Squat, Deadlift, and Overhead Press.
-- **Body Circumference Tracker**: Logs Chest, Waist, Arms, and Thigh measurements.
-- **Transformation Photos**: Before & after progress photo cards.
-- **Discipline Checklist & Streaks**: Daily habit checklist, streak counter, and weekly adherence score.
-- **Achievement Badges**: Milestones for 10-Ton Titan, Iron Consistency, Hydration Machine, and Record Crusher.
+![System Status](https://img.shields.io/badge/System-ONLINE-8DF2CF?style=for-the-badge&logoColor=07151A)
+![Specialization](https://img.shields.io/badge/Focus-AI%20%26%20Machine%20Learning-46D9D2?style=for-the-badge)
+![University](https://img.shields.io/badge/University-Lovely%20Professional%20University-756BFF?style=for-the-badge)
 
 ---
 
-## 🚀 Running the App
+## 🔬 Creative & Engineering Direction
 
-### Start Expo Development Server:
+This website is designed and engineered from scratch as an **Awwwards-caliber digital laboratory**. It rejects generic student templates, rainbow gradients, and floating particles in favor of an **editorial, technical, high-contrast visual identity**:
+
+- **Color System**:
+  - `DEEP INK (#07151A)` — Deep midnight background
+  - `MINERAL (#EAF4F0)` — Clean, high-contrast typography
+  - `ELECTRIC MINT (#8DF2CF)` — Primary active system signal
+  - `DIGITAL AQUA (#46D9D2)` — Engineering data & schematic accent
+  - `ULTRAVIOLET (#756BFF)` — Deep structural tech paths
+  - `WARM SIGNAL (#FF9275)` — Attention & focal nodes
+- **Typography**: Space Grotesk / Syne (Display), Manrope / Inter (Body), DM Mono (Utility & Telemetry).
+- **Zero Heavy Dependencies**: 100% native HTML5, modern CSS custom properties & Grid, and ES modular JavaScript.
+
+---
+
+## ⚡ Key Interactive Experiences
+
+1. **Cinematic Hero**:
+   - Live system status (`● SYSTEM ONLINE`), real-time UTC telemetry, scanning laser effect, and staggered text mask reveals.
+2. **Signature Experience: `NIVAS // BUILD CORE`**:
+   - Interactive technical pipeline: `PYTHON → DATA → ALGORITHMS → MACHINE LEARNING → INTELLIGENCE → APPLICATIONS`.
+   - Node-level inspection with real-time technical descriptions, roles, and related competencies.
+3. **Capability Matrix (Technical Constellation)**:
+   - Interactive capability map across `Languages`, `CS Foundations`, `Systems`, `Web / Mobile`, and `Tools`.
+   - Dynamic item isolation, context dimming, and metadata telemetry.
+4. **Selected Builds Archive & Blueprint Case Study Expansion**:
+   - **FreshBasket**: Responsive fruit e-commerce platform with localStorage cart persistence.
+   - **Gym & Fitness Planner**: Cross-platform mobile app (React Native + Expo + Firebase).
+   - **3-Year B.Tech Roadmap**: Interactive timeline charting technical skill evolution.
+   - **SRS — Ride Booking System**: IEEE Std 830-1998 formal software specification with TikZ DFDs.
+   - **SRS — SpotHero Parking Reservation**: IEEE 830 formal requirements document.
+   - **Software Engineering Exam Prep**: Interactive Study, Exam, and Quiz web platform.
+   - *In-place full-screen case study expansion modal.*
+5. **Build Log Terminal**:
+   - Monospaced developer terminal with scroll-triggered progressive log streaming and blinking command cursor.
+6. **Next Horizon Path**:
+   - Strategic progression roadmap: `Foundations → Software → Data → Machine Learning → Intelligent Products → AI/ML Engineer`.
+7. **Custom Magnetic Cursor**:
+   - Smooth lerp interpolation with context-aware states (`VIEW BUILD ↗`, `OPEN ↗`, button magnets), disabled on mobile.
+
+---
+
+## 🛠️ Project Structure
+
+```
+portfolioxNivi/
+├── index.html              # Semantic HTML5 layout with all 8 core sections
+├── css/
+│   ├── tokens.css          # Design tokens, color palette, typography scales, spacing
+│   ├── animations.css      # Keyframes, laser scan, text masks, node glows, reduced motion
+│   ├── components.css      # Floating nav, cursor, build core, project cards, modal, terminal
+│   └── main.css            # Base layout, editorial split story, contact, responsive styles
+├── js/
+│   ├── app.js              # Main orchestrator
+│   ├── cursor.js           # Custom magnetic desktop cursor
+│   ├── nav.js              # Floating navigation morph & active section observer
+│   ├── hero.js             # Cinematic intro sequence & real-time clock
+│   ├── buildCore.js        # Signature Build Core interactive pipeline
+│   ├── skills.js           # Capability constellation matrix
+│   ├── projects.js         # Selected builds archive & blueprint modal expansion
+│   ├── buildLog.js         # Scroll-triggered telemetry terminal
+│   ├── horizon.js          # Next horizon progression path
+│   └── contact.js          # Clipboard copy & contact handlers
+└── .gitignore              # Clean repository ignores
+```
+
+---
+
+## 🚀 How to Run Locally
+
+Because the project is built with clean modern web standards and ES modules, you can serve it with any local static HTTP server:
+
+### Option 1: Python HTTP Server (Built-in)
 ```bash
-# In the project directory:
-npx expo start
+# Python 3
+python -m http.server 8000
 ```
+Open [http://localhost:8000](http://localhost:8000) in your browser.
 
-### Run on Web (Browser Preview):
+### Option 2: Node.js / npx `serve`
 ```bash
-npm run web
-# or
-npx expo start --web
+npx -y serve .
 ```
 
-### Run on Mobile (iOS / Android):
-1. Install **Expo Go** from App Store or Google Play Store.
-2. Run `npx expo start` and scan the terminal QR code using your phone camera (iOS) or the Expo Go app (Android).
+### Option 3: VS Code Live Server
+Right-click `index.html` and select **"Open with Live Server"**.
 
 ---
 
-## 🛠️ Architecture & Tech Stack
+## 👤 Author
 
-```
-src/
-├── types/          # Full TypeScript interfaces (UserProfile, WorkoutLog, FoodItem, WearableDailyData, etc.)
-├── theme/          # Luxury dark mode palette (#090B10) with electric neon accents (#00F59B)
-├── data/           # 100+ Seeded exercises, workout templates, diet templates, and badges
-├── utils/          # BMR/TDEE calculator, Epley 1RM, date formatting, unit conversions
-├── services/       # Open Food Facts API, Wearables sync, Storage service, Firebase bridge
-├── store/          # Zustand state management with offline persistence
-├── components/     # Reusable glassmorphic cards, charts, set row items, and widgets
-├── screens/        # Auth, Dashboard, Workouts, Live Workout, Diet, Wearables, Progress, Settings
-└── navigation/     # AppNavigator and TabNavigator
-```
+**P. Lakshmi Nivas**  
+- GitHub: [@Nivas67](https://github.com/Nivas67)  
+- Specialization: Artificial Intelligence & Machine Learning  
+- Institution: Lovely Professional University (2025 — 2029)
