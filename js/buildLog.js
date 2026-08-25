@@ -1,20 +1,18 @@
 /**
  * Build Log Terminal Module
- * PEMMA LAKSHMI NIVAS // DIGITAL LABORATORY & AI/ML PORTFOLIO
+ * P. LAKSHMI NIVAS // DIGITAL LABORATORY & AI/ML PORTFOLIO
  */
 
 const LOG_ENTRIES = [
-  { text: "initializing digital laboratory environment...", type: "normal" },
-  { text: "loading candidate profile: Pemma Lakshmi Nivas (CSE · AI/ML)", type: "normal" },
-  { text: "Python execution engine loaded [v3.12]", type: "accent" },
-  { text: "DSA algorithmic core active (Trees, Graphs, DP)", type: "normal" },
-  { text: "DBMS & relational schema pipeline mounted", type: "normal" },
-  { text: "FreshBasket e-commerce web platform deployed", type: "highlight" },
-  { text: "Gym & Fitness mobile prototype running on Expo", type: "highlight" },
-  { text: "IEEE Std 830 software engineering specifications mapped", type: "normal" },
-  { text: "embedded systems & electrical signals synchronized", type: "normal" },
-  { text: "machine learning models & neural graphs → NEXT", type: "accent" },
-  { text: "next_target: impactful_ai_applications", type: "target" }
+  { text: "portfolio initialized", type: "normal" },
+  { text: "Python foundations active", type: "accent" },
+  { text: "DSA foundations active", type: "normal" },
+  { text: "FreshBasket built [Web / E-Commerce]", type: "highlight" },
+  { text: "GymFlex in development [Mobile + Smart Devices]", type: "highlight" },
+  { text: "LPUQuick concept mapped [Campus Quick-Commerce]", type: "highlight" },
+  { text: "software systems documented [IEEE Std 830]", type: "normal" },
+  { text: "AI/ML → next", type: "accent" },
+  { text: "next_target: AI/ML ENGINEER", type: "target" }
 ];
 
 export function initBuildLog() {
@@ -25,9 +23,8 @@ export function initBuildLog() {
   let hasTriggered = false;
 
   const now = new Date();
-  const dateStr = now.toISOString().slice(0, 10).replace(/-/g, '.');
-  const timeStr = now.toTimeString().slice(0, 5);
-  const timestampPrefix = `[${dateStr} ${timeStr}]`;
+  const yearStr = now.getFullYear();
+  const timestampPrefix = `[${yearStr}]`;
 
   function streamLogs() {
     if (hasTriggered) return;
@@ -63,14 +60,14 @@ export function initBuildLog() {
             const promptLine = document.createElement('div');
             promptLine.className = 'terminal-prompt-line';
             promptLine.innerHTML = `
-              <span>lakshmi-nivas@lab:~$</span>
+              <span>nivas@lab:~$</span>
               <span class="terminal-cursor"></span>
             `;
             terminalBody.appendChild(promptLine);
             terminalBody.scrollTop = terminalBody.scrollHeight;
-          }, 400);
+          }, 350);
         }
-      }, idx * 280);
+      }, idx * 250);
     });
   }
 

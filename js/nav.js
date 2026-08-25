@@ -1,6 +1,6 @@
 /**
  * Floating Navigation & Active Section Observer
- * PEMMA LAKSHMI NIVAS // DIGITAL LABORATORY & AI/ML PORTFOLIO
+ * P. LAKSHMI NIVAS // DIGITAL LABORATORY & AI/ML PORTFOLIO
  */
 
 export function initNavigation() {

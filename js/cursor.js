@@ -1,6 +1,6 @@
 /**
  * Custom Desktop Cursor System
- * PEMMA LAKSHMI NIVAS // DIGITAL LABORATORY & AI/ML PORTFOLIO
+ * P. LAKSHMI NIVAS // DIGITAL LABORATORY & AI/ML PORTFOLIO
  */
 
 export function initCustomCursor() {

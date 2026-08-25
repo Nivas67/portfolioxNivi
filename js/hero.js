@@ -1,6 +1,6 @@
 /**
  * Cinematic Hero Sequence & Telemetry Status
- * PEMMA LAKSHMI NIVAS // DIGITAL LABORATORY & AI/ML PORTFOLIO
+ * P. LAKSHMI NIVAS // DIGITAL LABORATORY & AI/ML PORTFOLIO
  */
 
 export function initHeroSequence() {

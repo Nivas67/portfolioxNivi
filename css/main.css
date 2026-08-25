@@ -1,6 +1,6 @@
 /* ==========================================================================
    MAIN LAYOUT & SECTION STYLES
-   PEMMA LAKSHMI NIVAS // DIGITAL LABORATORY & AI/ML PORTFOLIO
+   P. LAKSHMI NIVAS // DIGITAL LABORATORY & AI/ML PORTFOLIO
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -433,6 +433,63 @@ section {
   margin-top: var(--space-2);
 }
 
+/* Portfolio Narrative Flow Banner */
+.portfolio-narrative-box {
+  background: linear-gradient(135deg, rgba(11, 30, 36, 0.9) 0%, rgba(7, 21, 26, 0.95) 100%);
+  border: 1px solid var(--border-mint);
+  border-radius: 20px;
+  padding: var(--space-8) var(--space-10);
+  margin-top: var(--space-12);
+  position: relative;
+  overflow: hidden;
+}
+
+.narrative-tag {
+  font-family: var(--font-utility);
+  font-size: var(--text-2xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-electric-mint);
+  margin-bottom: var(--space-2);
+}
+
+.narrative-statement {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  color: var(--color-mineral);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-6);
+}
+
+.narrative-pathway {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  font-family: var(--font-utility);
+  font-size: var(--text-xs);
+}
+
+.narrative-step {
+  background: var(--color-mineral-ghost);
+  border: 1px solid var(--border-subtle);
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: var(--color-mineral);
+  font-weight: 600;
+}
+
+.narrative-step.is-highlight {
+  border-color: var(--border-mint);
+  color: var(--color-electric-mint);
+  background: rgba(141, 242, 207, 0.08);
+}
+
+.narrative-arrow {
+  color: var(--color-mineral-dim);
+}
+
 /* --------------------------------------------------------------------------
    08. FOOTER
    -------------------------------------------------------------------------- */
@@ -469,7 +526,28 @@ section {
 .footer-meta-right {
   display: flex;
   align-items: center;
-  gap: var(--space-6);
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.footer-links-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.footer-link {
+  color: var(--color-mineral-dim);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: var(--text-2xs);
+  transition: color var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: var(--color-electric-mint);
 }
 
 .footer-status-pill {

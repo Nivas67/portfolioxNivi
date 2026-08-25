@@ -1,6 +1,6 @@
 /**
  * Main Application Orchestrator
- * PEMMA LAKSHMI NIVAS // DIGITAL LABORATORY & AI/ML PORTFOLIO
+ * P. LAKSHMI NIVAS // DIGITAL LABORATORY & AI/ML PORTFOLIO
  */
 
 import { initCustomCursor } from './cursor.js';

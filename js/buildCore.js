@@ -1,6 +1,7 @@
 /**
  * Signature Experience: NIVAS // BUILD CORE
- * PEMMA LAKSHMI NIVAS // DIGITAL LABORATORY & AI/ML PORTFOLIO
+ * P. LAKSHMI NIVAS // DIGITAL LABORATORY & AI/ML PORTFOLIO
+ * Exact Pipeline: PYTHON → DSA → SYSTEMS → DATA → MACHINE LEARNING → AI → APPLICATIONS
  */
 
 const CORE_NODES = [
@@ -8,55 +9,64 @@ const CORE_NODES = [
     id: "python",
     step: "01 // SYNTAX & SYSTEMS",
     title: "PYTHON",
-    role: "Programming & Execution Foundation",
+    role: "Programming & Prototyping Foundation",
     usedFor: "AI / ML, Scripting, Automation, Scientific Computing, Backends",
-    description: "The primary language for model development, rapid prototyping, and algorithmic implementation.",
-    skills: ["Python 3", "NumPy", "Pandas", "OOP Architecture", "File I/O"]
+    description: "The core programming foundation for rapid prototyping, computational logic, and algorithmic execution.",
+    skills: ["Python 3", "OOP Architecture", "File I/O", "NumPy", "Automation"]
+  },
+  {
+    id: "dsa",
+    step: "02 // LOGICAL RIGOR",
+    title: "DSA",
+    role: "Data Structures & Algorithmic Optimization",
+    usedFor: "Trees, Graphs, Dynamic Programming, Time-Space Complexity",
+    description: "Rigorous computational problem-solving ensuring optimal execution efficiency before scaling to machine intelligence.",
+    skills: ["Trees & Graphs", "Dynamic Programming", "Recursion", "Big-O Analysis", "C & Memory"]
+  },
+  {
+    id: "systems",
+    step: "03 // HARDWARE & SPECS",
+    title: "SYSTEMS",
+    role: "Low-Level & Software Engineering Architecture",
+    usedFor: "Embedded Systems, Electrical Fundamentals, IEEE 830 Standards",
+    description: "Bridging software abstractions with physical hardware signals, microcontrollers, and formal engineering design specifications.",
+    skills: ["Embedded Systems", "Electrical Fundamentals", "IEEE Std 830", "DFD Modeling", "System Design"]
   },
   {
     id: "data",
-    step: "02 // STRUCTURING",
+    step: "04 // PERSISTENCE & PIPELINES",
     title: "DATA",
-    role: "Information Pipelines & Persistence",
-    usedFor: "DBMS, SQL Queries, Feature Extraction, Preprocessing, Schema Design",
-    description: "Managing structured and unstructured inputs to ensure clean, high-integrity data streams for downstream learning.",
-    skills: ["SQL / DBMS", "Data Normalization", "ER Modeling", "Firebase Realtime DB", "Data Cleaning"]
-  },
-  {
-    id: "algorithms",
-    step: "03 // LOGICAL FOUNDATION",
-    title: "ALGORITHMS",
-    role: "Computational Optimization & Logic",
-    usedFor: "DSA, Graph Traversal, Dynamic Programming, Time-Space Efficiency",
-    description: "Rigorous problem-solving ensuring computational complexity is minimized before scaling to neural layers.",
-    skills: ["Trees & Graphs", "Dynamic Programming", "Recursion", "Big-O Analysis", "C Programming"]
+    role: "Database Management & Information Flow",
+    usedFor: "DBMS, SQL, Relational Modeling, Firebase Realtime Sync",
+    description: "Managing structured and unstructured inputs, schema design, and high-integrity data streams for downstream learning.",
+    skills: ["DBMS / SQL", "ER Modeling", "Firebase Cloud DB", "Data Normalization", "Indexing"]
   },
   {
     id: "machine-learning",
-    step: "04 // PATTERN SYNTHESIS",
+    step: "05 // PATTERN SYNTHESIS",
     title: "MACHINE LEARNING",
-    role: "Statistical Pattern Recognition",
-    usedFor: "Regression, Classification, Gradient Descent, Supervised/Unsupervised",
-    description: "Building predictive mathematical formulations that adapt and generalize from empirical dataset patterns.",
-    skills: ["Scikit-Learn", "Loss Functions", "Feature Engineering", "Model Evaluation", "Cross-Validation"]
+    role: "Statistical Learning & Predictive Models",
+    usedFor: "Regression, Classification, Gradient Descent, Feature Engineering",
+    description: "Mathematical formulations and statistical algorithms that uncover patterns and generalize from empirical datasets.",
+    skills: ["Scikit-Learn", "Model Training", "Loss Functions", "Evaluation Metrics", "Feature Extraction"]
   },
   {
-    id: "intelligence",
-    step: "05 // NEURAL ARCHITECTURE",
-    title: "INTELLIGENCE",
-    role: "Deep Representation & Reasoning",
-    usedFor: "Neural Networks, Vision Inference, Transformer Attention, Multi-Modal",
-    description: "Deep learning representations capturing non-linear relationships across vision, text, and sensory telemetry.",
-    skills: ["PyTorch / TensorFlow", "CNNs & Vision", "Embeddings", "Transfer Learning", "Backpropagation"]
+    id: "ai",
+    step: "06 // NEURAL INTELLIGENCE",
+    title: "AI",
+    role: "Deep Representation & Decision Systems",
+    usedFor: "Neural Networks, Vision Inference, Recommendation Engines",
+    description: "Multi-layered representation learning and intelligent reasoning engines powering next-generation autonomous systems.",
+    skills: ["Deep Learning Concepts", "Neural Architectures", "Computer Vision Concepts", "Recommendation Systems"]
   },
   {
     id: "applications",
-    step: "06 // REAL-WORLD IMPACT",
+    step: "07 // REAL-WORLD IMPACT",
     title: "APPLICATIONS",
-    role: "Engineered Products & Deployment",
-    usedFor: "Mobile Apps, Full-Stack Interfaces, Embedded Edge AI, User Utility",
-    description: "Deploying intelligent models into cohesive, responsive web and mobile products that solve real-world problems.",
-    skills: ["React Native", "Expo", "REST APIs", "Modern Web", "Embedded Systems"]
+    role: "Deployed Products & User Utility",
+    usedFor: "Web Platforms, Mobile Apps, Connected Smart Devices, Campus Logistics",
+    description: "Translating computational intelligence and software engineering into tangible, responsive products that solve real-world problems.",
+    skills: ["FreshBasket (Web)", "GymFlex (Mobile & Smart Devices)", "LPUQuick (Campus Platform)", "SRS Blueprints"]
   }
 ];
 

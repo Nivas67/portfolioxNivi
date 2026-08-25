@@ -1,4 +1,4 @@
-# Pemma Lakshmi Nivas — AI/ML Engineer in Training
+# P. Lakshmi Nivas — AI/ML Engineer in Training
 > Personal digital laboratory & engineering portfolio showcasing foundational computer science, systems architecture, and AI/ML builds.
 
 ![System Status](https://img.shields.io/badge/System-ONLINE-8DF2CF?style=for-the-badge&logoColor=07151A)
@@ -27,25 +27,27 @@ This website is designed and engineered from scratch as an **Awwwards-caliber di
 
 1. **Cinematic Hero**:
    - Live system status (`● SYSTEM ONLINE`), real-time UTC telemetry, scanning laser effect, and staggered text mask reveals.
+   - Primary CTA: `EXPLORE MY BUILDS ↘` | Secondary CTA: `LET'S CONNECT ↗`.
 2. **Signature Experience: `NIVAS // BUILD CORE`**:
-   - Interactive technical pipeline: `PYTHON → DATA → ALGORITHMS → MACHINE LEARNING → INTELLIGENCE → APPLICATIONS`.
+   - Interactive technical pipeline: `PYTHON → DSA → SYSTEMS → DATA → MACHINE LEARNING → AI → APPLICATIONS`.
    - Node-level inspection with real-time technical descriptions, roles, and related competencies.
 3. **Capability Matrix (Technical Constellation)**:
-   - Interactive capability map across `Languages`, `CS Foundations`, `Systems`, `Web / Mobile`, and `Tools`.
+   - Interactive capability map across `Languages`, `CS Foundations`, `Systems`, `Web / Mobile`, and `Tools & Documentation`.
    - Dynamic item isolation, context dimming, and metadata telemetry.
-4. **Selected Builds Archive & Blueprint Case Study Expansion**:
-   - **FreshBasket**: Responsive fruit e-commerce platform with localStorage cart persistence.
-   - **Gym & Fitness Planner**: Cross-platform mobile app (React Native + Expo + Firebase).
-   - **3-Year B.Tech Roadmap**: Interactive timeline charting technical skill evolution.
-   - **SRS — Ride Booking System**: IEEE Std 830-1998 formal software specification with TikZ DFDs.
-   - **SRS — SpotHero Parking Reservation**: IEEE 830 formal requirements document.
-   - **Software Engineering Exam Prep**: Interactive Study, Exam, and Quiz web platform.
-   - *In-place full-screen case study expansion modal.*
-5. **Build Log Terminal**:
+4. **Selected Builds Archive & Blueprint Case Study Expansion (Exact 5 Projects)**:
+   - **01 — FreshBasket** (`WEB / E-COMMERCE`): Modern fruit e-commerce platform with localStorage cart persistence, dark mode, and glassmorphism UI.
+   - **02 — GymFlex** (`MOBILE / FITNESS / SMART DEVICES`): Fitness mobile app (React Native + Expo + Firebase) bridging workout planning with Bluetooth smart-watch telemetry.
+   - **03 — LPUQuick** (`CAMPUS / QUICK COMMERCE`): Campus quick-commerce platform concept solving block-wise student retail delivery logistics.
+   - **04 — SRS: Ride Booking System** (`SOFTWARE ENGINEERING / SYSTEM DESIGN`): Formal IEEE Std 830-1998 requirements specification with TikZ DFDs.
+   - **05 — SRS: SpotHero Parking Reservation** (`SOFTWARE ENGINEERING / SYSTEM DESIGN`): Formal IEEE 830 specification for real-time parking slot allocation.
+   - *In-place full-screen blueprint case study expansion modal.*
+5. **Portfolio Narrative Story**:
+   > *"I don't just learn technologies. I use what I learn to imagine, design and build products."*
+6. **Build Log Terminal**:
    - Monospaced developer terminal with scroll-triggered progressive log streaming and blinking command cursor.
-6. **Next Horizon Path**:
+7. **Next Horizon Path**:
    - Strategic progression roadmap: `Foundations → Software → Data → Machine Learning → Intelligent Products → AI/ML Engineer`.
-7. **Custom Magnetic Cursor**:
+8. **Custom Magnetic Cursor**:
    - Smooth lerp interpolation with context-aware states (`VIEW BUILD ↗`, `OPEN ↗`, button magnets), disabled on mobile.
 
 ---
@@ -65,13 +67,14 @@ portfolioxNivi/
 │   ├── cursor.js           # Custom magnetic desktop cursor
 │   ├── nav.js              # Floating navigation morph & active section observer
 │   ├── hero.js             # Cinematic intro sequence & real-time clock
-│   ├── buildCore.js        # Signature Build Core interactive pipeline
+│   ├── buildCore.js        # Signature Build Core 7-node interactive pipeline
 │   ├── skills.js           # Capability constellation matrix
-│   ├── projects.js         # Selected builds archive & blueprint modal expansion
+│   ├── projects.js         # Exact 5 projects archive & blueprint modal expansion
 │   ├── buildLog.js         # Scroll-triggered telemetry terminal
 │   ├── horizon.js          # Next horizon progression path
-│   └── contact.js          # Clipboard copy & contact handlers
-└── .gitignore              # Clean repository ignores
+│   └── contact.js          # Real contact actions & clipboard feedback
+├── README.md               # Repository documentation
+└── .gitignore              # Clean repository configuration
 ```
 
 ---
@@ -83,9 +86,9 @@ Because the project is built with clean modern web standards and ES modules, you
 ### Option 1: Python HTTP Server (Built-in)
 ```bash
 # Python 3
-python -m http.server 8000
+python -m http.server 8080
 ```
-Open [http://localhost:8000](http://localhost:8000) in your browser.
+Open [http://localhost:8080](http://localhost:8080) in your browser.
 
 ### Option 2: Node.js / npx `serve`
 ```bash
@@ -97,9 +100,11 @@ Right-click `index.html` and select **"Open with Live Server"**.
 
 ---
 
-## 👤 Author
+## 👤 Contact & Author
 
-**Pemma Lakshmi Nivas**  
-- GitHub: [@Nivas67](https://github.com/Nivas67)  
-- Specialization: Artificial Intelligence & Machine Learning  
-- Institution: Lovely Professional University (2025 — 2029)
+**P. Lakshmi Nivas**  
+- **Email**: [nivasnaidu07@gmail.com](mailto:nivasnaidu07@gmail.com)  
+- **GitHub**: [@Nivas67](https://github.com/Nivas67)  
+- **LinkedIn**: [linkedin.com/in/nivas-naidu-3b9216369](https://www.linkedin.com/in/nivas-naidu-3b9216369)  
+- **Specialization**: Artificial Intelligence & Machine Learning  
+- **Institution**: Lovely Professional University (2025 — 2029)
