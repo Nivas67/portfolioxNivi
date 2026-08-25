@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FITTRACK - Workout Analysis</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#dbe5d8",
+                        "surface-container-low": "#151e16",
+                        "on-primary": "#003918",
+                        "error-container": "#93000a",
+                        "error": "#ffb4ab",
+                        "secondary-container": "#00e3fd",
+                        "on-secondary-fixed-variant": "#004f58",
+                        "primary-fixed": "#63ff95",
+                        "on-secondary": "#00363d",
+                        "background": "#0d150e",
+                        "surface-variant": "#2e372e",
+                        "on-secondary-fixed": "#001f24",
+                        "surface-bright": "#323c32",
+                        "tertiary-fixed": "#ffdf92",
+                        "on-tertiary": "#3e2e00",
+                        "outline-variant": "#3b4a3d",
+                        "secondary": "#bdf4ff",
+                        "surface": "#0d150e",
+                        "surface-container-high": "#232c24",
+                        "inverse-surface": "#dbe5d8",
+                        "secondary-fixed": "#9cf0ff",
+                        "surface-tint": "#00e473",
+                        "tertiary-fixed-dim": "#e4c36e",
+                        "on-tertiary-container": "#795f13",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-primary-fixed-variant": "#005225",
+                        "on-surface-variant": "#bacbb9",
+                        "on-surface": "#dbe5d8",
+                        "primary": "#f5fff2",
+                        "surface-container-highest": "#2e372e",
+                        "primary-container": "#39ff88",
+                        "on-tertiary-fixed-variant": "#594400",
+                        "inverse-on-surface": "#29332a",
+                        "on-error": "#690005",
+                        "surface-container-lowest": "#081009",
+                        "on-secondary-container": "#00616d",
+                        "secondary-fixed-dim": "#00daf3",
+                        "on-primary-container": "#007236",
+                        "surface-dim": "#0d150e",
+                        "outline": "#849584",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed": "#00210b",
+                        "tertiary-container": "#ffdc84",
+                        "surface-container": "#19221a",
+                        "tertiary": "#fffbff",
+                        "inverse-primary": "#006d34",
+                        "primary-fixed-dim": "#00e473"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "16px",
+                        "lg": "24px",
+                        "sm": "8px",
+                        "xxl": "48px",
+                        "xs": "4px",
+                        "gutter": "20px",
+                        "xl": "32px",
+                        "margin": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "display-metrics": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-metrics": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background-color: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: inset 0.5px 0.5px 0px rgba(255, 255, 255, 0.2);
+        }
+        .glass-active {
+            background-color: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: inset 1px 1px 0px rgba(0, 227, 253, 0.3);
+        }
+        .glass-overlay {
+            background-color: rgba(255, 255, 255, 0.16);
+            backdrop-filter: blur(60px);
+        }
+        
+        /* Subtle glow for primary accents */
+        .glow-text {
+            text-shadow: 0 0 10px rgba(57, 255, 136, 0.5);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-[90px] md:pb-0 pt-[80px]">
+<!-- Background Gradient (Base Layer) -->
+<div class="fixed inset-0 z-[-1] bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-surface-container-high via-background to-background pointer-events-none"></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-white/12 transition-all duration-300 ease-in-out flex justify-between items-center px-margin h-16 w-full z-50">
+<button class="text-primary-container dark:text-primary-container hover:bg-white/5 p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<div class="font-headline-md text-headline-md font-bold tracking-tighter text-primary-container">
+            FITTRACK
+        </div>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-white/12">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="A highly detailed close-up portrait of a fitness enthusiast, looking focused and determined. The lighting is cinematic with a slight cyberpunk green rim light reflecting off their features. The background is a dark, abstract gym setting blurred out to maintain focus on the subject. Premium athletic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSAtoCbFu1H7gvd3_FgT-yS_VNncdU6UmXXacCTS80k-59S_p8sC2rFsZLRCwPjTvuyKFiMIdXVN1-X4Rzxjgaii8Pli5MY5wXbVmWEz21MKSpLh6dGK3IZVfQTz4pnFc86wC9Jg25dpDnIIIH0y46ltxfBvGDU6ayT4HKKKIFrfHUroA3w8ua_i9B1TBnRefadiXVk4Kcvqs1ejJF6ik3cvliJXPqWUtDkwF4E6C-xs88ZRyhXh1g"/>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="max-w-7xl mx-auto px-4 md:px-margin space-y-lg md:space-y-xl">
+<!-- Header Section -->
+<section class="mt-md flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-background">Workout Analysis</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-sm">Push Day Overview • Oct 14, 2023</p>
+</div>
+<div class="glass-panel rounded-xl px-4 py-2 flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary-container" data-icon="trending_up">trending_up</span>
+<span class="font-label-sm text-label-sm text-primary-container">Volume +8.4%</span>
+</div>
+</section>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-lg">
+<!-- Hero Metric: Heart Rate Zones -->
+<div class="col-span-1 md:col-span-8 glass-panel rounded-xl p-lg flex flex-col">
+<div class="flex justify-between items-start mb-lg">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-background">Heart Rate Zones</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Time spent in target zones</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Peak</span>
+<span class="w-3 h-3 rounded-full bg-secondary-container ml-2"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cardio</span>
+</div>
+</div>
+<div class="relative h-64 w-full mt-auto bg-surface-container/50 rounded-lg overflow-hidden border border-white/5">
+<!-- Faux Chart Representation using CSS -->
+<div class="absolute bottom-0 left-0 w-full h-[60%] bg-gradient-to-t from-primary-container/20 to-transparent"></div>
+<!-- Chart Bars -->
+<div class="absolute bottom-0 left-0 w-full h-full flex items-end justify-around px-4 pb-4 gap-2">
+<div class="w-full bg-secondary-container/40 rounded-t-sm h-[30%] relative group">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-surface text-on-surface font-label-sm text-label-sm px-2 py-1 rounded">10m</div>
+</div>
+<div class="w-full bg-primary-container/60 rounded-t-sm h-[50%] relative group">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-surface text-on-surface font-label-sm text-label-sm px-2 py-1 rounded">25m</div>
+</div>
+<div class="w-full bg-primary-container rounded-t-sm h-[80%] relative group shadow-[0_0_15px_rgba(57,255,136,0.3)]">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-surface text-on-surface font-label-sm text-label-sm px-2 py-1 rounded">45m</div>
+</div>
+<div class="w-full bg-primary-container/80 rounded-t-sm h-[60%] relative group">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-surface text-on-surface font-label-sm text-label-sm px-2 py-1 rounded">30m</div>
+</div>
+<div class="w-full bg-secondary-container/50 rounded-t-sm h-[40%] relative group">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-surface text-on-surface font-label-sm text-label-sm px-2 py-1 rounded">15m</div>
+</div>
+<div class="w-full bg-surface-variant rounded-t-sm h-[20%] relative group">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-surface text-on-surface font-label-sm text-label-sm px-2 py-1 rounded">5m</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Total Volume Stat -->
+<div class="col-span-1 md:col-span-4 glass-panel rounded-xl p-lg flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background">Total Volume</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Load lifted this session</p>
+</div>
+<div class="flex flex-col items-center justify-center flex-1">
+<span class="font-display-metrics text-display-metrics text-primary-container glow-text">12.4k</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mt-2">LBS</span>
+</div>
+<div class="mt-md pt-md border-t border-white/10 flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">vs Previous</span>
+<span class="font-label-sm text-label-sm text-primary-container bg-primary-container/10 px-2 py-1 rounded">+8.4%</span>
+</div>
+</div>
+<!-- Exercise Breakdown -->
+<div class="col-span-1 md:col-span-8 glass-panel rounded-xl p-lg">
+<h2 class="font-headline-md text-headline-md text-on-background mb-lg">Exercise Breakdown</h2>
+<div class="space-y-4">
+<!-- Exercise 1 -->
+<div class="flex items-center justify-between p-4 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10 transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center border border-white/10">
+<span class="material-symbols-outlined text-on-surface" data-icon="fitness_center">fitness_center</span>
+</div>
+<div>
+<h4 class="font-body-lg text-body-lg text-on-background font-semibold">Barbell Bench Press</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">4 sets • 8-10 reps</p>
+</div>
+</div>
+<div class="text-right">
+<div class="font-body-lg text-body-lg text-on-background font-semibold">225 lbs</div>
+<div class="font-label-sm text-label-sm text-primary-container flex items-center justify-end gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="arrow_upward">arrow_upward</span> 5 lbs
+                            </div>
+</div>
+</div>
+<!-- Exercise 2 -->
+<div class="flex items-center justify-between p-4 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10 transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center border border-white/10">
+<span class="material-symbols-outlined text-on-surface" data-icon="fitness_center">fitness_center</span>
+</div>
+<div>
+<h4 class="font-body-lg text-body-lg text-on-background font-semibold">Incline Dumbbell Press</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">3 sets • 10-12 reps</p>
+</div>
+</div>
+<div class="text-right">
+<div class="font-body-lg text-body-lg text-on-background font-semibold">85 lbs</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant flex items-center justify-end gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="horizontal_rule">horizontal_rule</span> Maintained
+                            </div>
+</div>
+</div>
+<!-- Exercise 3 -->
+<div class="flex items-center justify-between p-4 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10 transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center border border-white/10">
+<span class="material-symbols-outlined text-on-surface" data-icon="fitness_center">fitness_center</span>
+</div>
+<div>
+<h4 class="font-body-lg text-body-lg text-on-background font-semibold">Overhead Tricep Extension</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">3 sets • 12-15 reps</p>
+</div>
+</div>
+<div class="text-right">
+<div class="font-body-lg text-body-lg text-on-background font-semibold">60 lbs</div>
+<div class="font-label-sm text-label-sm text-primary-container flex items-center justify-end gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="arrow_upward">arrow_upward</span> 2 reps
+                            </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Muscle Engagement Heatmap -->
+<div class="col-span-1 md:col-span-4 glass-panel rounded-xl p-lg flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-background mb-lg">Muscle Engagement</h2>
+<div class="flex-1 relative flex items-center justify-center rounded-lg bg-surface-container/30 border border-white/5 overflow-hidden">
+<!-- Placeholder for Heatmap Image -->
+<div class="bg-contain bg-center bg-no-repeat w-full h-full min-h-[200px] opacity-80 mix-blend-screen" data-alt="A sleek, minimalist digital anatomical model of a human torso shown from the front. The style is wireframe or holographic on a dark background. The chest (pectorals), shoulders (deltoids), and triceps are highlighted with an intense, glowing electric green (#39FF88) to represent muscle engagement during a workout. High-tech, performance-oriented UI aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCsytDVd2l_jlf15Zhpk9nIxvlFsVB2X4-L73wZ2INRuz5_ZA26BxmrKzFgB7PCF_d2_Eikz_njZuCDUqVNFFaIoytM92IhDfsxDp8fNJrajByd8A0nuFm1ebYX5DO_AJU8nCT266oaaAcpp5h9FrH1syOpnxSlmsgOOQGUXRYH1i3RqF8qYci_aXt_r4l2XBSujpXzMdcuslzYH_yd85l7mys8ZDyExszd3_vkHAkIfhhraDrOve6N')"></div>
+<!-- Overlay Labels -->
+<div class="absolute top-4 left-4 flex flex-col gap-2">
+<span class="glass-panel px-2 py-1 rounded text-primary-container font-label-sm text-label-sm border-primary-container/30">Chest 45%</span>
+<span class="glass-panel px-2 py-1 rounded text-primary-container/80 font-label-sm text-label-sm">Shoulders 35%</span>
+<span class="glass-panel px-2 py-1 rounded text-primary-container/60 font-label-sm text-label-sm">Triceps 20%</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full rounded-t-xl bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-t border-white/12 flex justify-around items-center px-4 py-3 pb-safe z-50">
+<a class="flex flex-col items-center justify-center text-on-surface-variant/60 hover:text-primary-container/80 transition-transform duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="home_app_logo">home_app_logo</span>
+<span class="font-label-sm text-label-sm mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary-container scale-110 hover:text-primary-container/80 transition-transform duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="fitness_center">fitness_center</span>
+<span class="font-label-sm text-label-sm mt-1">Train</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant/60 hover:text-primary-container/80 transition-transform duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+<span class="font-label-sm text-label-sm mt-1">Nutrition</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant/60 hover:text-primary-container/80 transition-transform duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+<span class="font-label-sm text-label-sm mt-1">Coach</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant/60 hover:text-primary-container/80 transition-transform duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+<span class="font-label-sm text-label-sm mt-1">Progress</span>
+</a>
+</nav>
+</body></html>
