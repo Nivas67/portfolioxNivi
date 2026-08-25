@@ -1,4 +1,4 @@
-# P. Lakshmi Nivas — AI/ML Engineer in Training
+# Pemma Lakshmi Nivas — AI/ML Engineer in Training
 > Personal digital laboratory & engineering portfolio showcasing foundational computer science, systems architecture, and AI/ML builds.
 
 ![System Status](https://img.shields.io/badge/System-ONLINE-8DF2CF?style=for-the-badge&logoColor=07151A)
@@ -99,7 +99,7 @@ Right-click `index.html` and select **"Open with Live Server"**.
 
 ## 👤 Author
 
-**P. Lakshmi Nivas**  
+**Pemma Lakshmi Nivas**  
 - GitHub: [@Nivas67](https://github.com/Nivas67)  
 - Specialization: Artificial Intelligence & Machine Learning  
 - Institution: Lovely Professional University (2025 — 2029)

@@ -1,6 +1,6 @@
 /**
  * Technical Constellation & Capability Matrix
- * P. LAKSHMI NIVAS // DIGITAL LABORATORY & AI/ML PORTFOLIO
+ * PEMMA LAKSHMI NIVAS // DIGITAL LABORATORY & AI/ML PORTFOLIO
  */
 
 const SKILLS_DATA = [

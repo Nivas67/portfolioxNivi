@@ -1,6 +1,6 @@
 /**
  * Project Archive & Blueprint Case Study Expansion
- * P. LAKSHMI NIVAS // DIGITAL LABORATORY & AI/ML PORTFOLIO
+ * PEMMA LAKSHMI NIVAS // DIGITAL LABORATORY & AI/ML PORTFOLIO
  */
 
 const PROJECTS = [

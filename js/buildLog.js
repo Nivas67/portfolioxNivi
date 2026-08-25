@@ -1,11 +1,11 @@
 /**
  * Build Log Terminal Module
- * P. LAKSHMI NIVAS // DIGITAL LABORATORY & AI/ML PORTFOLIO
+ * PEMMA LAKSHMI NIVAS // DIGITAL LABORATORY & AI/ML PORTFOLIO
  */
 
 const LOG_ENTRIES = [
   { text: "initializing digital laboratory environment...", type: "normal" },
-  { text: "loading candidate profile: P. Lakshmi Nivas (CSE · AI/ML)", type: "normal" },
+  { text: "loading candidate profile: Pemma Lakshmi Nivas (CSE · AI/ML)", type: "normal" },
   { text: "Python execution engine loaded [v3.12]", type: "accent" },
   { text: "DSA algorithmic core active (Trees, Graphs, DP)", type: "normal" },
   { text: "DBMS & relational schema pipeline mounted", type: "normal" },
