@@ -1,59 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
   <defs>
-    <!-- Background Gradient -->
-    <radialGradient id="bgGrad" cx="50%" cy="40%" r="60%">
-      <stop offset="0%" stop-color="#143640"/>
-      <stop offset="45%" stop-color="#0B2027"/>
-      <stop offset="85%" stop-color="#061217"/>
-      <stop offset="100%" stop-color="#030A0D"/>
+    <!-- Background Radial Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#12303A"/>
+      <stop offset="40%" stop-color="#0A1D24"/>
+      <stop offset="80%" stop-color="#051014"/>
+      <stop offset="100%" stop-color="#02080A"/>
     </radialGradient>
 
-    <!-- Glowing Cyber Rings -->
-    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Glowing Electric Mint & Digital Aqua Gradients -->
+    <linearGradient id="neonMint" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#8DF2CF"/>
       <stop offset="50%" stop-color="#46D9D2"/>
-      <stop offset="100%" stop-color="#2298B0"/>
+      <stop offset="100%" stop-color="#249BB2"/>
     </linearGradient>
 
-    <!-- Professional Skin Lighting -->
-    <linearGradient id="skinBase" x1="20%" y1="0%" x2="80%" y2="100%">
-      <stop offset="0%" stop-color="#D99A70"/>
-      <stop offset="50%" stop-color="#C28358"/>
-      <stop offset="100%" stop-color="#9E6138"/>
-    </linearGradient>
-
-    <linearGradient id="skinShadow" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#9E6138"/>
-      <stop offset="100%" stop-color="#7B4522"/>
-    </linearGradient>
-
-    <!-- Tailored Suit & Blazer -->
-    <linearGradient id="suitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1E2E38"/>
-      <stop offset="50%" stop-color="#121D24"/>
-      <stop offset="100%" stop-color="#0A1116"/>
-    </linearGradient>
-
-    <linearGradient id="lapelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#283D4A"/>
-      <stop offset="100%" stop-color="#152129"/>
-    </linearGradient>
-
-    <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+    <linearGradient id="goldTech" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#D1DDE6"/>
-    </linearGradient>
-
-    <!-- Hair Shading -->
-    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#2A2421"/>
-      <stop offset="40%" stop-color="#161210"/>
-      <stop offset="100%" stop-color="#0A0807"/>
+      <stop offset="40%" stop-color="#EAF4F0"/>
+      <stop offset="100%" stop-color="#8DF2CF"/>
     </linearGradient>
 
     <!-- Glow Filter -->
-    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="8" result="blur"/>
+    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -61,106 +31,47 @@
     </filter>
   </defs>
 
-  <!-- Circular Clip Path -->
-  <clipPath id="avatarClip">
-    <circle cx="250" cy="250" r="240"/>
-  </clipPath>
+  <!-- Base Circle Background -->
+  <circle cx="250" cy="250" r="240" fill="url(#bgGrad)"/>
 
-  <g clip-path="url(#avatarClip)">
-    <!-- Deep Space / Tech Studio Backdrop -->
-    <rect width="500" height="500" fill="url(#bgGrad)"/>
+  <!-- Outer Concentric Orbit Rings -->
+  <circle cx="250" cy="250" r="230" fill="none" stroke="rgba(141, 242, 207, 0.15)" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <circle cx="250" cy="250" r="215" fill="none" stroke="url(#neonMint)" stroke-width="2.5" filter="url(#glowEffect)" opacity="0.85"/>
+  <circle cx="250" cy="250" r="195" fill="none" stroke="rgba(70, 217, 210, 0.2)" stroke-width="1.5"/>
+  <circle cx="250" cy="250" r="150" fill="none" stroke="rgba(141, 242, 207, 0.1)" stroke-width="1" stroke-dasharray="12 4"/>
 
-    <!-- Subtle Geometric Tech Grid -->
-    <circle cx="250" cy="250" r="215" fill="none" stroke="rgba(141, 242, 207, 0.12)" stroke-width="1.5" stroke-dasharray="8 8"/>
-    <circle cx="250" cy="250" r="170" fill="none" stroke="rgba(70, 217, 210, 0.08)" stroke-width="1"/>
-    <line x1="250" y1="20" x2="250" y2="480" stroke="rgba(141, 242, 207, 0.05)" stroke-width="1"/>
-    <line x1="20" y1="250" x2="480" y2="250" stroke="rgba(141, 242, 207, 0.05)" stroke-width="1"/>
+  <!-- Radar / Crosshair Target Lines -->
+  <line x1="250" y1="30" x2="250" y2="70" stroke="#8DF2CF" stroke-width="2" stroke-linecap="round"/>
+  <line x1="250" y1="430" x2="250" y2="470" stroke="#8DF2CF" stroke-width="2" stroke-linecap="round"/>
+  <line x1="30" y1="250" x2="70" y2="250" stroke="#8DF2CF" stroke-width="2" stroke-linecap="round"/>
+  <line x1="430" y1="250" x2="470" y2="250" stroke="#8DF2CF" stroke-width="2" stroke-linecap="round"/>
 
-    <!-- Ambient Rim Glow Behind Silhouette -->
-    <circle cx="250" cy="230" r="120" fill="rgba(141, 242, 207, 0.15)" filter="url(#neonGlow)"/>
+  <!-- Center Metallic Core Shield -->
+  <polygon points="250,110 370,180 370,320 250,390 130,320 130,180" fill="rgba(11, 30, 36, 0.9)" stroke="url(#neonMint)" stroke-width="2" filter="url(#glowEffect)"/>
 
-    <!-- ================= PORTRAIT SILHOUETTE ================= -->
+  <!-- Inner Hexagon Grid Accents -->
+  <polygon points="250,135 345,190 345,310 250,365 155,310 155,190" fill="none" stroke="rgba(141, 242, 207, 0.25)" stroke-width="1" stroke-dasharray="4 4"/>
 
-    <!-- Shoulders & Tailored Suit -->
-    <path d="M70 500 C70 380, 140 335, 250 335 C360 335, 430 380, 430 500 Z" fill="url(#suitGrad)"/>
-
-    <!-- Left & Right Shoulder Seams & Highlights -->
-    <path d="M100 500 C110 400, 160 350, 250 350" fill="none" stroke="rgba(141, 242, 207, 0.25)" stroke-width="1.5"/>
-    <path d="M400 500 C390 400, 340 350, 250 350" fill="none" stroke="rgba(70, 217, 210, 0.15)" stroke-width="1.5"/>
-
-    <!-- Crisp White Collared Shirt -->
-    <polygon points="215,335 285,335 270,450 230,450" fill="url(#shirtGrad)"/>
-    <polygon points="190,335 230,400 250,350 220,330" fill="#FFFFFF"/>
-    <polygon points="310,335 270,400 250,350 280,330" fill="#FFFFFF"/>
-
-    <!-- Sleek Tech Tie / Placket Accent -->
-    <line x1="250" y1="365" x2="250" y2="460" stroke="#8DF2CF" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
-
-    <!-- Suit Lapels -->
-    <polygon points="160,335 215,440 190,500 120,440" fill="url(#lapelGrad)"/>
-    <polygon points="340,335 285,440 310,500 380,440" fill="url(#lapelGrad)"/>
-
-    <!-- Neck & Throat Shadow -->
-    <rect x="220" y="260" width="60" height="90" rx="14" fill="url(#skinShadow)"/>
-    <path d="M225 275 Q250 295 275 275 L275 345 L225 345 Z" fill="url(#skinBase)"/>
-
-    <!-- Head / Face Shape -->
-    <ellipse cx="250" cy="225" rx="68" ry="85" fill="url(#skinBase)"/>
-
-    <!-- Jawline & Chin Definition -->
-    <path d="M195 240 C195 300, 220 318, 250 318 C280 318, 305 300, 305 240" fill="url(#skinBase)"/>
-
-    <!-- Ears -->
-    <ellipse cx="178" cy="225" rx="11" ry="20" fill="url(#skinBase)"/>
-    <path d="M178 215 Q184 225 178 235" stroke="#9E6138" stroke-width="2" fill="none"/>
-
-    <ellipse cx="322" cy="225" rx="11" ry="20" fill="url(#skinBase)"/>
-    <path d="M322 215 Q316 225 322 235" stroke="#9E6138" stroke-width="2" fill="none"/>
-
-    <!-- Professional Hairstyle (Clean Modern Pompadour / Fade) -->
-    <path d="M176 210 C172 120, 328 120, 324 210 C340 170, 328 125, 290 105 C245 80, 195 110, 176 210 Z" fill="url(#hairGrad)"/>
-    <path d="M182 185 C190 135, 310 135, 318 185 C310 160, 280 140, 250 140 C215 140, 190 160, 182 185 Z" fill="#161210"/>
-    <path d="M200 135 Q250 115 300 145" stroke="rgba(255,255,255,0.12)" stroke-width="3" stroke-linecap="round" fill="none"/>
-
-    <!-- Eyebrows (Sharp & Defined) -->
-    <path d="M205 200 Q225 192 240 198" stroke="#161210" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-    <path d="M260 198 Q275 192 295 200" stroke="#161210" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-
-    <!-- Eyes (Focused, Intelligent, Confident) -->
-    <ellipse cx="223" cy="214" rx="7.5" ry="5" fill="#FFFFFF"/>
-    <ellipse cx="277" cy="214" rx="7.5" ry="5" fill="#FFFFFF"/>
-
-    <circle cx="224" cy="214" r="4.5" fill="#1B1512"/>
-    <circle cx="276" cy="214" r="4.5" fill="#1B1512"/>
-
-    <circle cx="225" cy="212.5" r="1.5" fill="#FFFFFF"/>
-    <circle cx="277" cy="212.5" r="1.5" fill="#FFFFFF"/>
-
-    <circle cx="222" cy="215" r="0.8" fill="rgba(141, 242, 207, 0.8)"/>
-    <circle cx="274" cy="215" r="0.8" fill="rgba(141, 242, 207, 0.8)"/>
-
-    <!-- Nose (Refined 3D Gradient Form) -->
-    <path d="M250 205 L246 242 L254 242" stroke="#9E6138" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <circle cx="243" cy="242" r="1.5" fill="#7B4522"/>
-    <circle cx="257" cy="242" r="1.5" fill="#7B4522"/>
-
-    <!-- Mustache & Friendly Confident Smile -->
-    <path d="M234 256 Q250 252 266 256" stroke="#1B1512" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-    <path d="M235 268 Q250 278 265 268" stroke="#7B4522" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-    <path d="M240 268 Q250 274 260 268" fill="#FFFFFF" opacity="0.9"/>
-
-    <!-- Rim Light on Cheek & Jawline -->
-    <path d="M185 225 Q190 285 240 310" stroke="rgba(141, 242, 207, 0.4)" stroke-width="2" fill="none"/>
+  <!-- Monogram Initials: LN (Lakshmi Nivas) -->
+  <g font-family="'Space Grotesk', -apple-system, sans-serif" font-weight="800" text-anchor="middle">
+    <!-- Main Big Initials -->
+    <text x="250" y="275" font-size="108" fill="url(#goldTech)" letter-spacing="4px" filter="url(#glowEffect)">LN</text>
+    
+    <!-- Subtitle Badge -->
+    <rect x="180" y="305" width="140" height="24" rx="12" fill="#07151A" stroke="#8DF2CF" stroke-width="1"/>
+    <text x="250" y="321" font-size="11" fill="#8DF2CF" font-family="'DM Mono', monospace" font-weight="700" letter-spacing="2px">AI / ML ENGINEER</text>
   </g>
 
-  <!-- Outer Luminous Neon Rings -->
-  <circle cx="250" cy="250" r="244" fill="none" stroke="url(#mintGrad)" stroke-width="3" filter="url(#neonGlow)" opacity="0.8"/>
-  <circle cx="250" cy="250" r="244" fill="none" stroke="#8DF2CF" stroke-width="2"/>
+  <!-- Orbit Nodes / Glowing Satellites -->
+  <circle cx="250" cy="35" r="4" fill="#8DF2CF" filter="url(#glowEffect)"/>
+  <circle cx="465" cy="250" r="4" fill="#8DF2CF" filter="url(#glowEffect)"/>
+  <circle cx="250" cy="465" r="4" fill="#8DF2CF" filter="url(#glowEffect)"/>
+  <circle cx="35" cy="250" r="4" fill="#8DF2CF" filter="url(#glowEffect)"/>
 
-  <!-- Futuristic Corner AI / Engineering Badge -->
-  <g transform="translate(370, 370)">
-    <circle cx="30" cy="30" r="32" fill="#061217" stroke="url(#mintGrad)" stroke-width="2.5" filter="url(#neonGlow)"/>
-    <circle cx="30" cy="30" r="32" fill="#061217" stroke="#8DF2CF" stroke-width="1.5"/>
-    <text x="30" y="35" fill="#8DF2CF" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="14" font-weight="800" letter-spacing="1px" text-anchor="middle">AI</text>
+  <!-- Live Status Badge on Bottom Right -->
+  <g transform="translate(365, 365)">
+    <circle cx="32" cy="32" r="34" fill="#07151A" stroke="url(#neonMint)" stroke-width="2" filter="url(#glowEffect)"/>
+    <circle cx="20" cy="32" r="4" fill="#8DF2CF" filter="url(#glowEffect)"/>
+    <text x="38" y="36" fill="#EAF4F0" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="800" letter-spacing="1px">PRO</text>
   </g>
 </svg>
