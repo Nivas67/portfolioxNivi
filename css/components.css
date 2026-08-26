@@ -1415,18 +1415,204 @@
   }
 }
 
-@media (max-width: 600px) {
-  .skills-cards-grid,
-  .skills-cards-grid.soft-skills-grid {
-    grid-template-columns: 1fr;
+/* --------------------------------------------------------------------------
+   09. CV MODAL & RESUME VIEWER
+   -------------------------------------------------------------------------- */
+.cv-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 21, 26, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: var(--z-modal);
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: clamp(1rem, 4vw, 3rem);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
+}
+
+.cv-modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cv-modal-container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  background: #08191F;
+  border: 1px solid var(--border-mint);
+  border-radius: 20px;
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.85), 0 0 32px rgba(141, 242, 207, 0.15);
+  margin: auto 0;
+  color: var(--color-mineral);
+  font-family: var(--font-body);
+}
+
+.cv-top-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: var(--space-4);
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.cv-top-title {
+  font-family: var(--font-utility);
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-electric-mint);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.cv-action-btns {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.cv-doc-header {
+  border-bottom: 2px solid var(--border-strong);
+  padding-bottom: var(--space-6);
+  margin-bottom: var(--space-6);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.cv-name {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-2);
+}
+
+.cv-meta-links {
+  font-family: var(--font-utility);
+  font-size: var(--text-xs);
+  color: var(--color-mineral-dim);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cv-meta-links a {
+  color: var(--color-digital-aqua);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.cv-meta-links a:hover {
+  color: var(--color-electric-mint);
+  text-decoration: underline;
+}
+
+.cv-section-title {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-electric-mint);
+  border-bottom: 1px solid rgba(141, 242, 207, 0.3);
+  padding-bottom: 4px;
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-4);
+}
+
+.cv-content-block {
+  margin-bottom: var(--space-5);
+}
+
+.cv-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: 4px;
+}
+
+.cv-entry-title {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.cv-entry-date {
+  font-family: var(--font-utility);
+  font-size: var(--text-xs);
+  color: var(--color-mineral-dim);
+}
+
+.cv-entry-sub {
+  font-style: italic;
+  font-size: var(--text-sm);
+  color: var(--color-mineral-dim);
+  margin-bottom: 6px;
+}
+
+.cv-bullets {
+  padding-left: var(--space-4);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-mineral-dim);
+  margin-bottom: var(--space-3);
+}
+
+.cv-bullets li {
+  margin-bottom: 4px;
+}
+
+.cv-tech-line {
+  font-family: var(--font-utility);
+  font-size: var(--text-xs);
+  color: var(--color-electric-mint);
+  background: rgba(141, 242, 207, 0.06);
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
   }
-  .about-me-buttons {
-    flex-direction: column;
-    width: 100%;
+  .cv-modal-overlay, .cv-modal-overlay * {
+    visibility: visible;
   }
-  .about-me-buttons .btn-primary,
-  .about-me-buttons .btn-secondary {
-    width: 100%;
+  .cv-modal-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: white !important;
+    color: black !important;
+  }
+  .cv-modal-container {
+    box-shadow: none !important;
+    border: none !important;
+    background: white !important;
+    color: black !important;
+  }
+  .cv-top-actions {
+    display: none !important;
   }
 }
+
 

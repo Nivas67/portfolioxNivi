@@ -29,22 +29,35 @@ export function initContactActions() {
   }
 
   const viewCvBtn = document.getElementById('view-cv-btn');
-  if (viewCvBtn) {
+  const cvModalOverlay = document.getElementById('cv-modal-overlay');
+  const cvModalClose = document.getElementById('cv-modal-close');
+
+  if (viewCvBtn && cvModalOverlay) {
     viewCvBtn.addEventListener('click', (e) => {
-      // If a resume file is added at assets/resume.pdf, it will open, otherwise scroll to contact
-      const resumeUrl = 'assets/resume.pdf';
-      fetch(resumeUrl, { method: 'HEAD' })
-        .then(res => {
-          if (res.ok) window.open(resumeUrl, '_blank');
-          else {
-            const contactSection = document.getElementById('contact');
-            if (contactSection) contactSection.scrollIntoView({ behavior: 'smooth' });
-          }
-        })
-        .catch(() => {
-          const contactSection = document.getElementById('contact');
-          if (contactSection) contactSection.scrollIntoView({ behavior: 'smooth' });
-        });
+      e.preventDefault();
+      cvModalOverlay.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    });
+
+    if (cvModalClose) {
+      cvModalClose.addEventListener('click', () => {
+        cvModalOverlay.classList.remove('is-open');
+        document.body.style.overflow = '';
+      });
+    }
+
+    cvModalOverlay.addEventListener('click', (e) => {
+      if (e.target === cvModalOverlay) {
+        cvModalOverlay.classList.remove('is-open');
+        document.body.style.overflow = '';
+      }
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && cvModalOverlay.classList.contains('is-open')) {
+        cvModalOverlay.classList.remove('is-open');
+        document.body.style.overflow = '';
+      }
     });
   }
 }

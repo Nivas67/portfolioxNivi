@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pemma Lakshmi Nivas — Curriculum Vitae</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07151A;
+      --card-bg: #0B1E24;
+      --text: #EAF4F0;
+      --text-dim: #A8C2BA;
+      --accent: #8DF2CF;
+      --border: rgba(234, 244, 240, 0.12);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.55;
+      padding: 2rem 1rem;
+    }
+    .cv-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 3rem;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    }
+    .cv-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      border-radius: 9999px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-print {
+      background: var(--accent);
+      color: #07151A;
+      border: none;
+    }
+    .btn-back {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.2rem;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+    }
+    .meta-links {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .meta-links a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .meta-links a:hover {
+      text-decoration: underline;
+    }
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 4px;
+      margin: 1.5rem 0 1rem 0;
+    }
+    .skill-category {
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+      color: var(--text-dim);
+    }
+    .skill-category strong {
+      color: #FFFFFF;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .entry {
+      margin-bottom: 1.25rem;
+    }
+    .entry-head {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #FFFFFF;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .entry-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      font-weight: normal;
+    }
+    .entry-sub {
+      font-size: 0.875rem;
+      color: var(--text-dim);
+      font-style: italic;
+      margin-bottom: 4px;
+    }
+    ul {
+      padding-left: 1.25rem;
+      font-size: 0.875rem;
+      color: var(--text-dim);
+    }
+    li {
+      margin-bottom: 4px;
+    }
+    .tech-stack {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--accent);
+      margin-top: 4px;
+      background: rgba(141, 242, 207, 0.08);
+      padding: 3px 8px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    @media print {
+      body { background: white; color: black; padding: 0; }
+      .cv-wrapper { border: none; box-shadow: none; padding: 0; background: white; color: black; }
+      .cv-actions { display: none; }
+      h1, .entry-head { color: black !important; }
+      .section-title { color: #000000 !important; border-bottom: 1px solid #000; }
+      .meta-links, .entry-date, .entry-sub, ul, .skill-category { color: #333333 !important; }
+      .tech-stack { background: #eeeeee !important; color: #000000 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="cv-wrapper">
+    <div class="cv-actions">
+      <a href="index.html" class="btn btn-back">← Back to Portfolio</a>
+      <button onclick="window.print()" class="btn btn-print">Print / Save PDF 🖨</button>
+    </div>
+
+    <header class="header">
+      <div>
+        <h1>Pemma Lakshmi Nivas</h1>
+        <div class="meta-links" style="margin-top: 6px;">
+          <div>Email: <a href="mailto:nivasnaidu07@gmail.com">nivasnaidu07@gmail.com</a></div>
+          <div>Mobile: <a href="tel:+917671836211">+91-7671836211</a></div>
+        </div>
+      </div>
+      <div class="meta-links">
+        <div>LinkedIn: <a href="https://www.linkedin.com/in/nivas-naidu-3b9216369/" target="_blank">linkedin.com/in/nivas-naidu</a></div>
+        <div>GitHub: <a href="https://github.com/Nivas67" target="_blank">github.com/Nivas67</a></div>
+      </div>
+    </header>
+
+    <section>
+      <div class="section-title">SKILLS</div>
+      <div class="skill-category"><strong>Languages:</strong> Python, C, C++</div>
+      <div class="skill-category"><strong>Technologies:</strong> HTML, CSS, React, Tailwind CSS, Node.js, Express.js</div>
+      <div class="skill-category"><strong>Databases / Tools:</strong> MySQL, PostgreSQL, MongoDB, Git, GitHub</div>
+      <div class="skill-category"><strong>Soft Skills:</strong> Problem solving, Team collaboration, Time management, Communication Skills</div>
+    </section>
+
+    <section>
+      <div class="section-title">PROJECTS</div>
+      
+      <div class="entry">
+        <div class="entry-head">
+          <span>FitTrack | AI-Powered Fitness & Health Platform</span>
+          <span class="entry-date">June 2025 – Aug 2026</span>
+        </div>
+        <ul>
+          <li>Developed a personalized fitness platform that helps users track workouts, fitness goals, and daily progress through an intuitive dashboard.</li>
+          <li>Integrated AI-powered recommendations to provide personalized workout and fitness guidance based on user goals and activity data.</li>
+          <li>Designed interactive dashboards to visualize workout history, progress, goals, and fitness statistics in one centralized platform.</li>
+        </ul>
+        <div class="tech-stack">Tech Stack: React.js, Node.js, Express.js, MongoDB, Tailwind CSS, API</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span>LPU Quick | Campus Quick-Commerce Platform</span>
+          <span class="entry-date">May 2026 – Aug 2026</span>
+        </div>
+        <ul>
+          <li>Developing a campus-focused quick-commerce platform enabling LPU students to order groceries, snacks, stationery, personal-care products, and daily essentials online.</li>
+          <li>Implementing student authentication, hostel/block-based delivery, product browsing, cart management, and real-time order tracking for a seamless campus shopping experience.</li>
+          <li>Building vendor dashboards for inventory, product management, order processing, and availability across campus stores.</li>
+        </ul>
+        <div class="tech-stack">Tech Stack: React.js, Node.js, Express.js, MongoDB, Tailwind CSS, Stripe API</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span>Nivx Trades — Full-Stack E-Commerce / Business Website</span>
+          <span class="entry-date">Mar 2026 – Aug 2026</span>
+        </div>
+        <ul>
+          <li>Built a full-stack construction-materials platform for showcasing products and managing customer orders.</li>
+          <li>Developed responsive interfaces using React.js and Tailwind CSS, with dedicated product, contact, orders, and admin workflows.</li>
+          <li>Integrated user authentication, order tracking, and admin-side order management for a complete business workflow.</li>
+        </ul>
+        <div class="tech-stack">Tech Stack: React.js, Node.js, Express.js, Tailwind CSS, PostgreSQL, Supabase, Prisma, Vercel, Render</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">ACHIEVEMENTS</div>
+      <ul>
+        <li>Built and deployed <strong>real-world web applications</strong> with authentication, APIs, databases, and responsive UI.</li>
+        <li>Developed a <strong>community-focused Python and AI awareness project</strong> for school students.</li>
+        <li>Participated in <strong>technical projects and hackathons</strong>, developing practical software solutions.</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="section-title">EDUCATION</div>
+      <div class="entry">
+        <div class="entry-head">
+          <span>Lovely Professional University</span>
+          <span class="entry-date">Aug 2026 – Present</span>
+        </div>
+        <div class="entry-sub">Bachelor of Technology - Computer Science and Engineering; CGPA: 5.3 · Phagwara, Punjab</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span>Narayana Junior College</span>
+          <span class="entry-date">Jun 2023 – Mar 2025</span>
+        </div>
+        <div class="entry-sub">Higher Secondary Education; Percentage: 88.9% · Guntur, Andhra Pradesh</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span>Navodaya E.M School</span>
+          <span class="entry-date">Jun 2022 – Mar 2023</span>
+        </div>
+        <div class="entry-sub">Secondary Education; Percentage: 80.0% · Guntur, Andhra Pradesh</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">TRAINING & CERTIFICATES</div>
+      <div class="entry">
+        <div class="entry-head">
+          <span>Lovely Professional University | Python Programming Trainee</span>
+          <span class="entry-date">Jun 2026 – Jul 2026</span>
+        </div>
+        <div class="entry-sub">Summer Training on Python (Part 1 & 2) — Fundamentals, Data Structures & Logic</div>
+      </div>
+      <ul>
+        <li>Programming Fundamentals using Python — Part 1 & 2 | <strong>Infosys Springboard</strong> (Jun 2026)</li>
+        <li>Artificial Intelligence and Machine Learning | <strong>Coursera</strong> (Mar 2026)</li>
+        <li>Time Management for Personal & Professional Productivity | <strong>Coursera</strong> (Nov 2025)</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
