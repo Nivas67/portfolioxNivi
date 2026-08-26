@@ -154,73 +154,32 @@
     </section>
 
     <!-- ====================================================================
-         02. ABOUT SECTION (Editorial Split Layout)
+         02. ABOUT ME SECTION
          ==================================================================== -->
     <section id="about">
       <div class="site-container">
-        <div class="about-grid">
-          <!-- Left Column: Editorial Story -->
-          <div>
-            <div class="section-label">01 / ABOUT</div>
-            <h2 class="about-editorial-heading">LEARNING<br>BY BUILDING.</h2>
-            
-            <p class="about-editorial-lead">
-              I'm pursuing B.Tech in Computer Science Engineering with a specialization in Artificial Intelligence & Machine Learning at Lovely Professional University.
+        <div class="section-heading-centered anim-fade-up">
+          <h2 class="section-title">About Me</h2>
+          <div class="heading-underline"></div>
+        </div>
+
+        <div class="about-me-grid anim-fade-up">
+          <!-- Left Column: Bio & Action Buttons -->
+          <div class="about-me-bio-col">
+            <p class="about-me-bio-text">
+              I'm a B.Tech Computer Science Engineering student at Lovely Professional University, specializing in Artificial Intelligence and Machine Learning. I like turning coursework into things that actually run — from a full-stack e-commerce site and a mobile fitness app to formal IEEE-standard requirement specs. My foundations are in Python, C, data structures, algorithms, and databases, with coursework in embedded systems and electrical fundamentals layered on top. I'm working toward becoming an AI/ML engineer, building applications that make a real difference across industries.
             </p>
 
-            <p class="about-editorial-text">
-              My current foundation spans Python, C, Data Structures & Algorithms, DBMS, software engineering, embedded systems and electrical fundamentals. Rather than treating theory in isolation, I use what I learn to imagine, design, and build functional digital products.
-            </p>
-
-            <div class="about-goal-callout">
-              <h4>Career Goal</h4>
-              <p>"Become an AI/ML engineer who builds impactful applications across industries."</p>
+            <div class="about-me-buttons">
+              <a href="#contact" class="btn-primary">Get In Touch</a>
+              <a href="#contact" class="btn-secondary" id="view-cv-btn">View CV</a>
             </div>
           </div>
 
-          <!-- Right Column: Learning Progression Timeline -->
-          <div>
-            <div class="learning-timeline">
-              <div class="timeline-step is-active">
-                <div class="timeline-step-label">// PHASE 01 · ACTIVE</div>
-                <h3 class="timeline-step-title">FOUNDATIONS</h3>
-                <div class="timeline-step-skills">
-                  <span class="tech-tag">Python</span>
-                  <span class="tech-tag">C</span>
-                  <span class="tech-tag">DSA</span>
-                </div>
-              </div>
-
-              <div class="timeline-step is-active">
-                <div class="timeline-step-label">// PHASE 02 · ACTIVE</div>
-                <h3 class="timeline-step-title">SYSTEMS</h3>
-                <div class="timeline-step-skills">
-                  <span class="tech-tag">DBMS</span>
-                  <span class="tech-tag">Embedded Systems</span>
-                  <span class="tech-tag">Electrical Fundamentals</span>
-                  <span class="tech-tag">Software Engineering (IEEE 830)</span>
-                </div>
-              </div>
-
-              <div class="timeline-step is-active">
-                <div class="timeline-step-label">// PHASE 03 · DEPLOYED</div>
-                <h3 class="timeline-step-title">BUILDING</h3>
-                <div class="timeline-step-skills">
-                  <span class="tech-tag">Web (HTML/CSS/JS)</span>
-                  <span class="tech-tag">Mobile (React Native / Expo)</span>
-                  <span class="tech-tag">Firebase Backend</span>
-                </div>
-              </div>
-
-              <div class="timeline-step">
-                <div class="timeline-step-label">// PHASE 04 · TARGET</div>
-                <h3 class="timeline-step-title">NEXT</h3>
-                <div class="timeline-step-skills">
-                  <span class="tech-tag">Machine Learning</span>
-                  <span class="tech-tag">AI Systems</span>
-                  <span class="tech-tag">Intelligent Products</span>
-                </div>
-              </div>
+          <!-- Right Column: Circular Profile Photo with Glowing Ring -->
+          <div class="about-photo-wrapper">
+            <div class="about-photo-ring">
+              <img src="assets/profile-photo.png" alt="P. Lakshmi Nivas" class="about-profile-img" onerror="this.onerror=null;this.src='assets/profile-avatar.svg';">
             </div>
           </div>
         </div>
@@ -228,42 +187,28 @@
     </section>
 
     <!-- ====================================================================
-         03. SKILLS SECTION (Capability Matrix)
+         03. MY SKILLS SECTION
          ==================================================================== -->
     <section id="skills">
       <div class="site-container">
-        <div class="section-header-compact">
-          <div>
-            <div class="section-label">02 / CAPABILITY MATRIX</div>
-            <h2 class="section-title-large">TECHNICAL<br>CONSTELLATION.</h2>
-          </div>
-          <p class="section-subtitle">
-            An engineered map of core competencies spanning foundational algorithms, systems engineering, mobile frameworks, and hardware fundamentals.
-          </p>
+        <div class="section-heading-centered anim-fade-up">
+          <h2 class="section-title">My Skills</h2>
+          <div class="heading-underline"></div>
         </div>
 
-        <!-- Capability Matrix Grid -->
-        <div id="skills-matrix-grid" class="skills-matrix-grid">
-          <!-- Rendered dynamically by skills.js -->
+        <!-- Technical Skills Group (4 cols desktop, 2 tablet, 1 mobile) -->
+        <div class="skills-group-block anim-fade-up">
+          <h3 class="skills-subheading">Technical Skills</h3>
+          <div id="tech-skills-grid" class="skills-cards-grid">
+            <!-- Rendered by js/skills.js -->
+          </div>
         </div>
 
-        <!-- Detail Inspector Bar -->
-        <div class="skills-detail-inspector">
-          <div>
-            <div class="channel-label">Selected Competency</div>
-            <div class="channel-value" id="skill-detail-name">Python</div>
-          </div>
-          <div>
-            <div class="channel-label">Foundation</div>
-            <div class="channel-value" id="skill-detail-foundation">Programming</div>
-          </div>
-          <div>
-            <div class="channel-label">Focus Areas</div>
-            <div class="channel-value" id="skill-detail-focus">AI / ML, Algorithms, Automation</div>
-          </div>
-          <div>
-            <div class="channel-label">Status</div>
-            <div class="channel-value" id="skill-detail-status" style="color: var(--color-electric-mint);">ACTIVE</div>
+        <!-- Soft Skills Group (4 cols desktop, 2 tablet, 1 mobile) -->
+        <div class="skills-group-block anim-fade-up">
+          <h3 class="skills-subheading">Soft Skills</h3>
+          <div id="soft-skills-grid" class="skills-cards-grid soft-skills-grid">
+            <!-- Rendered by js/skills.js -->
           </div>
         </div>
       </div>
