@@ -32,13 +32,7 @@ export function initContactActions() {
   const cvModalOverlay = document.getElementById('cv-modal-overlay');
   const cvModalClose = document.getElementById('cv-modal-close');
 
-  if (viewCvBtn && cvModalOverlay) {
-    viewCvBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      cvModalOverlay.classList.add('is-open');
-      document.body.style.overflow = 'hidden';
-    });
-
+  if (cvModalOverlay) {
     if (cvModalClose) {
       cvModalClose.addEventListener('click', () => {
         cvModalOverlay.classList.remove('is-open');
