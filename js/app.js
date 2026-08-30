@@ -9,6 +9,7 @@ import { initHeroSequence } from './hero.js';
 import { initBuildCore } from './buildCore.js';
 import { initSkillsMatrix } from './skills.js';
 import { initProjectsArchive } from './projects.js';
+import { initCertificationsMatrix } from './certificates.js';
 import { initBuildLog } from './buildLog.js';
 import { initNextHorizon } from './horizon.js';
 import { initContactActions } from './contact.js';
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBuildCore();
   initSkillsMatrix();
   initProjectsArchive();
+  initCertificationsMatrix();
   initBuildLog();
   initNextHorizon();
   initContactActions();

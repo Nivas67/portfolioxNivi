@@ -42,6 +42,7 @@
         <li class="nav-link-item"><a href="#about">About</a></li>
         <li class="nav-link-item"><a href="#skills">Skills</a></li>
         <li class="nav-link-item"><a href="#projects">Projects</a></li>
+        <li class="nav-link-item"><a href="#certifications">Certifications</a></li>
         <li class="nav-link-item"><a href="#build-log">Build Log</a></li>
         <li class="nav-link-item"><a href="#contact">Contact</a></li>
       </ul>
@@ -69,8 +70,9 @@
       <li><a href="#about">01 // ABOUT</a></li>
       <li><a href="#skills">02 // SKILLS</a></li>
       <li><a href="#projects">03 // PROJECTS</a></li>
-      <li><a href="#build-log">04 // BUILD LOG</a></li>
-      <li><a href="#contact">05 // CONTACT</a></li>
+      <li><a href="#certifications">04 // CERTIFICATIONS</a></li>
+      <li><a href="#build-log">05 // BUILD LOG</a></li>
+      <li><a href="#contact">06 // CONTACT</a></li>
     </ul>
   </div>
 
@@ -259,13 +261,43 @@
     </section>
 
     <!-- ====================================================================
-         05. BUILD LOG (Developer Terminal)
+         05. CERTIFICATIONS & CREDENTIALS SECTION
+         ==================================================================== -->
+    <section id="certifications">
+      <div class="site-container-wide">
+        <div class="section-header-compact">
+          <div>
+            <div class="section-label">04 / VERIFIED CREDENTIALS</div>
+            <h2 class="section-title-large">CERTIFIED<br>EXPERTISE.</h2>
+          </div>
+          <p class="section-subtitle">
+            Industry-recognized certifications and verified academic credentials spanning Artificial Intelligence, Advanced Python, Data Structures & Algorithms, and Computer Programming.
+          </p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="cert-filter-bar anim-fade-up">
+          <button class="cert-filter-btn is-active" data-category="all">ALL CREDENTIALS (6)</button>
+          <button class="cert-filter-btn" data-category="ai">AI & MACHINE LEARNING</button>
+          <button class="cert-filter-btn" data-category="programming">PYTHON & PROGRAMMING</button>
+          <button class="cert-filter-btn" data-category="dsa">DATA STRUCTURES & ALGORITHMS</button>
+        </div>
+
+        <!-- Certifications Cards Grid -->
+        <div id="certifications-grid" class="certifications-grid">
+          <!-- Rendered dynamically by js/certificates.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         06. BUILD LOG (Developer Terminal)
          ==================================================================== -->
     <section id="build-log">
       <div class="site-container">
         <div class="section-header-compact">
           <div>
-            <div class="section-label">04 / CONTINUOUS TELEMETRY</div>
+            <div class="section-label">05 / CONTINUOUS TELEMETRY</div>
             <h2 class="section-title-large">BUILD LOG.</h2>
           </div>
           <p class="section-subtitle">
@@ -293,13 +325,13 @@
     </section>
 
     <!-- ====================================================================
-         06. NEXT HORIZON
+         07. NEXT HORIZON
          ==================================================================== -->
     <section id="horizon">
       <div class="site-container">
         <div class="section-header-compact">
           <div>
-            <div class="section-label">05 / ENGINEERING TRAJECTORY</div>
+            <div class="section-label">06 / ENGINEERING TRAJECTORY</div>
             <h2 class="section-title-large">NEXT<br>HORIZON.</h2>
           </div>
           <p class="section-subtitle">
@@ -321,11 +353,11 @@
     </section>
 
     <!-- ====================================================================
-         07. CONTACT & COLLABORATION
+         08. CONTACT & COLLABORATION
          ==================================================================== -->
     <section id="contact" class="contact-section">
       <div class="site-container">
-        <div class="section-label">06 / COLLABORATE & CONNECT</div>
+        <div class="section-label">07 / COLLABORATE & CONNECT</div>
         <h2 class="contact-headline">LET'S BUILD<br>WHAT'S NEXT.</h2>
         
         <p class="contact-supporting-text">
@@ -473,6 +505,71 @@
         </button>
       </div>
     </div>
+  </div>
+
+  <!-- ====================================================================
+       FULLSCREEN CERTIFICATE LIGHTBOX MODAL
+       ==================================================================== -->
+  <div id="cert-modal-overlay" class="cert-modal-overlay" aria-hidden="true">
+    <div class="cert-modal-container">
+      <button id="cert-modal-close" class="modal-close-btn" aria-label="Close Certificate Preview">✕</button>
+      
+      <div class="cert-modal-grid">
+        <div class="cert-modal-preview-box">
+          <img id="modal-cert-img" src="" alt="Certificate Preview" class="cert-modal-img">
+          <div class="cert-modal-preview-actions">
+            <span class="cert-badge-status">
+              <span class="status-dot"></span>
+              AUTHENTIC VERIFIED CREDENTIAL
+            </span>
+            <a id="modal-cert-verify-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="padding: 6px 16px; font-size: 11px;">
+              Verify Issuer ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="cert-modal-details-col">
+          <div class="cert-modal-header">
+            <div id="modal-cert-num" class="cert-modal-meta-tag">// 01 · AI & MACHINE LEARNING</div>
+            <h2 id="modal-cert-title" class="cert-modal-title">Certificate Title</h2>
+            <p id="modal-cert-desc" class="cert-desc"></p>
+          </div>
+
+          <table class="cert-spec-table">
+            <tbody>
+              <tr>
+                <td class="cert-spec-label">Issuing Body</td>
+                <td id="modal-cert-issuer" class="cert-spec-val">Infosys Springboard</td>
+              </tr>
+              <tr>
+                <td class="cert-spec-label">Issue Date</td>
+                <td id="modal-cert-date" class="cert-spec-val">June 2026</td>
+              </tr>
+              <tr>
+                <td class="cert-spec-label">Duration / Credits</td>
+                <td id="modal-cert-duration" class="cert-spec-val">48 Hours / 4.8 CEUs</td>
+              </tr>
+              <tr>
+                <td class="cert-spec-label">Credential ID</td>
+                <td id="modal-cert-id" class="cert-spec-val" style="font-family: var(--font-utility); color: var(--color-electric-mint);">4831994964PL</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="cert-syllabus-box">
+            <h4>// Syllabus & Competency Mastery</h4>
+            <ul id="modal-cert-syllabus" class="cert-syllabus-list"></ul>
+          </div>
+
+          <div>
+            <div class="channel-label" style="margin-bottom: var(--space-2);">Validated Skills & Domains</div>
+            <div id="modal-cert-skills" class="cert-skills-pills"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ====================================================================
        CV / RESUME MODAL VIEWER
        ==================================================================== -->
@@ -600,9 +697,11 @@
         <div class="cv-entry-sub">Python Programming Trainee — Fundamentals, Data Structures & Logic</div>
       </div>
       <ul class="cv-bullets">
-        <li>Programming Fundamentals using Python — Part 1 & 2 | <strong>Infosys Springboard</strong> (Jun 2026)</li>
-        <li>Artificial Intelligence and Machine Learning | <strong>Coursera</strong> (Mar 2026)</li>
-        <li>Time Management for Personal & Professional Productivity | <strong>Coursera</strong> (Nov 2025)</li>
+        <li>CS205: Building with Artificial Intelligence (48 Hours · 4.8 CEUs) | <strong>Saylor Academy</strong> (Feb 2026) [ID: 4831994964PL]</li>
+        <li>Introduction to Artificial Intelligence | <strong>Infosys Springboard</strong> (Mar 2026)</li>
+        <li>Programming Fundamentals using Python — Part 1 & Part 2 | <strong>Infosys Springboard</strong> (Jun 2026)</li>
+        <li>Certificate of Appreciation — Computer Programming (150 Hours) | <strong>iamneo / NIIT & LPU</strong> (May 2026) [ID: 13BH1CI2ce6Af0Dg3Bh1]</li>
+        <li>Leadership Course: Data Structures & Algorithms — Series I | <strong>upGrad Education</strong> (Oct 2025)</li>
       </ul>
     </div>
   </div>
