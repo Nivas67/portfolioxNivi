@@ -11,6 +11,7 @@ export const PROJECTS = [
     category: "WEB / E-COMMERCE",
     status: "COMPLETED",
     badge: "COMPLETED",
+    image: "assets/projects/freshbasket.jpg",
     description: "A modern fruit e-commerce website focused on creating a smooth and visually engaging online shopping experience.",
     tech: ["HTML", "CSS", "JavaScript", "Bootstrap 5", "localStorage"],
     positioning: "FreshBasket represents my foundation in web development and interactive product building.",
@@ -36,6 +37,7 @@ export const PROJECTS = [
     category: "MOBILE / FITNESS / SMART DEVICES",
     status: "IN DEVELOPMENT",
     badge: "IN DEVELOPMENT",
+    image: "assets/projects/gymflex.jpg",
     description: "GymFlex is my fitness application concept and development project focused on combining workout planning, diet logging, fitness progress and connected smart-device experiences.",
     tech: ["React Native", "Expo", "Firebase", "Bluetooth LE", "Health Sensors"],
     positioning: "GymFlex represents my transition from web development into mobile applications, connected devices and intelligent fitness experiences.",
@@ -61,6 +63,7 @@ export const PROJECTS = [
     category: "CAMPUS / QUICK COMMERCE / STUDENT PLATFORM",
     status: "PRODUCT CONCEPT / DEVELOPMENT",
     badge: "CONCEPT / DEV",
+    image: "assets/projects/lpuquick.png",
     description: "LPUQuick is a campus-focused quick-commerce product concept designed around the everyday needs of Lovely Professional University students.",
     tech: ["React / Web", "Mobile UI", "Firebase / DBMS", "Geolocation", "Payment Gateway Concept"],
     positioning: "LPUQuick demonstrates my ability to identify real problems within the student/campus environment and think about them as scalable digital products.",
@@ -91,6 +94,7 @@ export const PROJECTS = [
     category: "SOFTWARE ENGINEERING / SYSTEM DESIGN",
     status: "ACADEMIC / COMPLETED",
     badge: "COMPLETED",
+    image: "assets/projects/srs-ride-booking.jpg",
     description: "A formal Software Requirements Specification for a Ride Booking System following IEEE Std 830-1998 standards.",
     tech: ["LaTeX", "Overleaf", "TikZ", "IEEE 830-1998", "DFD Modeling"],
     positioning: "Demonstrates my understanding of requirements engineering, system analysis and software design.",
@@ -115,6 +119,7 @@ export const PROJECTS = [
     category: "SOFTWARE ENGINEERING / SYSTEM DESIGN",
     status: "ACADEMIC / COMPLETED",
     badge: "COMPLETED",
+    image: "assets/projects/srs-spothero.jpg",
     description: "A formal Software Requirements Specification for a parking reservation system following IEEE Std 830-1998 standards.",
     tech: ["LaTeX", "Overleaf", "TikZ Schematics", "IEEE 830-1998", "System Architecture"],
     positioning: "Demonstrates requirements engineering, system thinking and the ability to translate a real-world problem into a structured software system.",
@@ -144,9 +149,14 @@ export function initProjectsArchive() {
   gridContainer.innerHTML = PROJECTS.map((p) => `
     <article class="project-blueprint-card" data-id="${p.id}">
       <div class="project-schematic-preview">
-        <div class="schematic-canvas-layer"></div>
-        <div class="schematic-content-visual">
+        <img src="${p.image}" alt="${p.title} Preview" class="project-card-image" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="schematic-content-visual" style="display: none;">
           ${renderSchematicGraphic(p.schematicType)}
+        </div>
+        <div class="project-image-gradient-overlay"></div>
+        <div class="project-image-badge">
+          <span class="status-dot"></span>
+          <span>${p.badge}</span>
         </div>
       </div>
       <div class="project-card-body">
@@ -209,6 +219,13 @@ export function initProjectsArchive() {
     document.getElementById('modal-project-objective').textContent = project.objective;
     document.getElementById('modal-project-learned').textContent = project.learned;
     document.getElementById('modal-project-status').textContent = project.status;
+
+    // Set modal project image
+    const modalImg = document.getElementById('modal-project-img');
+    if (modalImg) {
+      modalImg.src = project.image;
+      modalImg.alt = `${project.title} Visual Preview`;
+    }
 
     // Positioning callout
     const posEl = document.getElementById('modal-project-positioning');
