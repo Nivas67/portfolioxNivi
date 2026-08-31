@@ -353,9 +353,9 @@
     </section>
 
     <!-- ====================================================================
-         08. CONTACT & COLLABORATION
+         08. COLLABORATE & CONNECT
          ==================================================================== -->
-    <section id="contact" class="contact-section">
+    <section id="collaborate" class="contact-section">
       <div class="site-container">
         <div class="section-label">07 / COLLABORATE & CONNECT</div>
         <h2 class="contact-headline">LET'S BUILD<br>WHAT'S NEXT.</h2>
@@ -412,6 +412,81 @@
               <div class="channel-hint">Connect for career & opportunities</div>
             </div>
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         09. CONTACT ME SECTION (THEMED // UNIQUE & ATTRACTIVE)
+         ==================================================================== -->
+    <section id="contact" class="custom-contact-section">
+      <div class="site-container">
+        <!-- Themed Contact Me Header matching portfolio visual language -->
+        <div class="section-heading-centered anim-fade-up">
+          <div class="contact-header-badge">
+            <span class="status-dot"></span>
+            <span>GET IN TOUCH // DIRECT LINE</span>
+          </div>
+          <h2 class="section-title">Contact Me</h2>
+          <div class="heading-underline"></div>
+          
+          <div class="contact-me-info-meta">
+            <p class="contact-me-meta-row">
+              <strong class="meta-row-label">Email:</strong>
+              <a href="mailto:nivasnaidu07@gmail.com" class="meta-row-link" id="nivas-direct-email-link" data-cursor="pointer">nivasnaidu07@gmail.com</a>
+              <button type="button" id="contact-me-copy-btn" class="quick-copy-mini-btn" title="Copy Email" aria-label="Copy Email">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span id="contact-me-copy-toast" class="mini-toast">Copied!</span>
+              </button>
+            </p>
+            <p class="contact-me-meta-row">
+              <strong class="meta-row-label">Location:</strong>
+              <span class="meta-row-text">Jalandhar, Punjab-144411</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Themed Contact Form Card -->
+        <div class="contact-me-card-box anim-fade-up">
+          <form id="contact-me-form" class="contact-me-form" novalidate>
+            <!-- Name Input Field -->
+            <div class="contact-me-field-group">
+              <label for="contact-sender-name" class="contact-me-label">Name</label>
+              <input type="text" id="contact-sender-name" name="name" class="contact-me-input" placeholder="Your Name" required autocomplete="name">
+              <div class="contact-me-error-hint" id="sender-name-error"></div>
+            </div>
+
+            <!-- Email Input Field -->
+            <div class="contact-me-field-group">
+              <label for="contact-sender-email" class="contact-me-label">Email</label>
+              <input type="email" id="contact-sender-email" name="email" class="contact-me-input" placeholder="Your Email" required autocomplete="email">
+              <div class="contact-me-error-hint" id="sender-email-error"></div>
+            </div>
+
+            <!-- Message Textarea Field -->
+            <div class="contact-me-field-group">
+              <div class="contact-me-label-row">
+                <label for="contact-sender-msg" class="contact-me-label">Message</label>
+                <span class="contact-me-counter" id="sender-msg-counter">0 / 1000</span>
+              </div>
+              <textarea id="contact-sender-msg" name="message" class="contact-me-textarea" rows="6" placeholder="Your Message..." maxlength="1000" required></textarea>
+              <div class="contact-me-error-hint" id="sender-msg-error"></div>
+            </div>
+
+            <!-- Send Message Button -->
+            <div class="contact-me-btn-row">
+              <button type="submit" id="contact-me-submit-btn" class="contact-me-send-btn" data-cursor="pointer">
+                <span class="btn-send-label">Send Message</span>
+                <span class="btn-send-spinner" aria-hidden="true"></span>
+              </button>
+            </div>
+
+            <!-- Feedback Banner -->
+            <div id="contact-me-feedback" class="contact-me-feedback-banner" aria-live="polite"></div>
+          </form>
         </div>
       </div>
     </section>
